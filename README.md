@@ -1,6 +1,6 @@
-# Python Project Template
+# Repository Template
 
-A minimal starting point a basic repository.
+A minimal starting point for a basic repository.
 
 ## Project structure
 
