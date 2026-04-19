@@ -5,21 +5,14 @@ A minimal starting point for a basic repository.
 ## Template structure
 
 > [!NOTE]
-> `tree -a .`
+> `tree -a -I '.vscode|.git|.prettier*|.editor*|.markdown*' .`
 
 ```none
 .
-├── .editorconfig
 ├── .github
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── .gitignore
-├── .markdownlint.json
 ├── .pre-commit-config.yaml
-├── .prettierignore
-├── .prettierrc
-├── .vscode
-│   ├── extensions.json
-│   └── settings.json
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md
