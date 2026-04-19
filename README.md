@@ -2,7 +2,7 @@
 
 A minimal starting point for a basic repository.
 
-## Project structure
+## Template structure
 
 > [!NOTE]
 > `tree -a .`
