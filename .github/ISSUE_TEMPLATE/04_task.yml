@@ -1,7 +1,7 @@
-name: Task
+name: 💡 Task
 description: Track a general task or chore
-title: "[Task] <short summary>"
-labels: [ task ]
+title: '[TASK] <short summary>'
+labels: [task]
 type: task
 body:
   - type: markdown

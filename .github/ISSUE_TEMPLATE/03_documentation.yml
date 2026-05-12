@@ -1,7 +1,7 @@
-name: Documentation Issue
+name: 📚 Documentation Request
 description: Report a documentation problem or request
-title: "[Docs] <short summary>"
-labels: [ documentation ]
+title: '[DOCUMENTATION] <short summary>'
+labels: [documentation]
 type: documentation
 body:
   - type: textarea
