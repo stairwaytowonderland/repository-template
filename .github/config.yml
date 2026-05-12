@@ -19,10 +19,10 @@ template_sync:
       title: '[Task] <short summary>'
       labels: [task]
   labels:
+    documentation: documentation
     feature-request: enhancement
     bug-report: bug
     task: task
-    documentation: documentation
 contact_links:
   - name: Project Documentation
     url: https://github.com/your-org/your-repo/wiki

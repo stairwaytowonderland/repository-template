@@ -1,8 +1,8 @@
 name: Bug Report
 description: Report a bug or unexpected behavior
-title: "[Bug] <short summary>"
+title: '[Bug] <short summary>'
 # labels: [ bug, needs-triage ]
-labels: [ bug ]
+labels: [bug]
 type: bug
 body:
   - type: markdown
@@ -23,7 +23,10 @@ body:
     attributes:
       label: Steps to Reproduce
       description: List the steps to reproduce the bug.
-      placeholder: 1. ...\n2. ...\n3. ...
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
     validations:
       required: true
   - type: textarea
