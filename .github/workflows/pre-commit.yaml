@@ -15,4 +15,4 @@ on:
 jobs:
   pre-commit:
     name: Run pre-commit
-    uses: stairwaytowonderland/actions/.github/workflows/pre-commit.yaml@v1.9.0
+    uses: stairwaytowonderland/actions/.github/workflows/pre-commit.yaml@v1.10.0
