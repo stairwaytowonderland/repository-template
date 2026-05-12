@@ -46,7 +46,7 @@ on:
 jobs:
   import-issues:
     name: Import Issues
-    uses: stairwaytowonderland/actions/.github/workflows/import-csv-issues.yaml@v1.9.0
+    uses: stairwaytowonderland/actions/.github/workflows/import-csv-issues.yaml@v1.10.0
     secrets:
       github-token: ${{ secrets[github.event.inputs.secret-token-name] }}
     with:
