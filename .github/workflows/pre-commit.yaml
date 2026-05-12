@@ -1,0 +1,18 @@
+name: Pre-commit
+
+on:
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+    inputs:
+      config:
+        description: 'Path to the pre-commit config file.'
+        type: string
+        required: false
+        default: '.pre-commit-config.yaml'
+
+jobs:
+  pre-commit:
+    name: Run pre-commit
+    uses: stairwaytowonderland/actions/.github/workflows/pre-commit.yaml@v1.9.0

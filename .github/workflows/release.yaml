@@ -1,0 +1,11 @@
+name: Release a Version
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Release
+    uses: stairwaytowonderland/create-release/.github/workflows/release.yaml@v1.4.0

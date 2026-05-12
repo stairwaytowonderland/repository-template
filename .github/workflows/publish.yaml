@@ -1,0 +1,24 @@
+name: Publish a Release
+
+on:
+  # Fires when a tag matching v* is pushed with personal credentials.
+  push:
+    tags:
+      - 'v*'
+
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to release (e.g. v1.2.3)'
+        required: true
+      notes-b64:
+        description: 'Base64-encoded release notes (Markdown)'
+        required: false
+
+jobs:
+  publish:
+    name: Publish
+    uses: stairwaytowonderland/create-release/.github/workflows/publish.yaml@v1.4.0
+    with:
+      tag: ${{ github.event.inputs.tag }}
+      notes-b64: ${{ github.event.inputs.notes-b64 }}
