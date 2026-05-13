@@ -40,7 +40,7 @@ be installed and/or configured.
 
          ```json
          {
-           plugins: [
+           "plugins": [
              [
                "@semantic-release/changelog",
                {
