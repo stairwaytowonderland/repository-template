@@ -30,34 +30,62 @@ A minimal starting point for a basic repository.
 
 ## Enabling Changelog Generation (for downstream repos)
 
-This template disables changelog generation by default.
+This template disables changelog generation and asset modification by default.
 
-To enable changelog generation in your repository:
+1. ### Enable changelog generation in your repository
 
-1. Add the `@semantic-release/changelog` plugin to `.releaserc`:
+   1. Add the `@semantic-release/changelog` plugin to `.releaserc`:
 
-    ```json
-    {
-      // ...
-      plugins: [
-        // [...],
-        [
-          "@semantic-release/changelog",
-          {
-            "changelogFile": "CHANGELOG.md"
-          }
-        ],
-        // [...]
-      ]
-    }
-    ```
+       ```json
+       {
+         // ...
+         plugins: [
+           // [...],
+           [
+             "@semantic-release/changelog",
+             {
+               "changelogFile": "CHANGELOG.md"
+             }
+           ],
+           // [...]
+         ]
+       }
+       ```
 
-2. Install the dependency:
+   2. Install the dependency:
 
-    ```sh
-    npm install --save-dev @semantic-release/changelog
-    ```
+       ```sh
+       npm install --save-dev @semantic-release/changelog
+       ```
 
-3. Commit your changes.
+2. ### Enable asset modification in your repository
 
-This will allow semantic-release to generate and update `CHANGELOG.md` on each release.
+   1. Update the `@semantic-release/git` plugin in `.releaserc`:
+
+       ```json
+       {
+         // ...
+         plugins: [
+           [
+             // [...],
+             "@semantic-release/git",
+             {
+               "assets": [
+                 "CHANGELOG.md",
+                 "package.json",
+                 "package-lock.json"
+               ],
+               "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+             },
+             // [...]
+           ]
+         ]
+       }
+       ```
+
+3. ### Commit your changes
+
+    This will allow:
+
+    - **semantic-release** to generate and update `CHANGELOG.md` on each release
+    - **semantic-release** to update the main version in `package.json` and `package-lock.json` on each release
