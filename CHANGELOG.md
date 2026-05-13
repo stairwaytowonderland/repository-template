@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/stairwaytowonderland/repository-template/compare/v1.0.0...v1.1.0) (2026-05-13)
+
+### ✨ Features
+
+* updates ([fe236f7](https://github.com/stairwaytowonderland/repository-template/commit/fe236f712e99f2f309704ebe4aecea968efd95db))
+
 ## 1.0.0 (2026-05-12)
 
 ### ✨ Features
