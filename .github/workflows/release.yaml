@@ -9,3 +9,5 @@ jobs:
   release:
     name: Release
     uses: stairwaytowonderland/create-release/.github/workflows/release.yaml@v1.4.0
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
