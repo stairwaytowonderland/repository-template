@@ -73,8 +73,8 @@ be installed and/or configured.
 
     This will allow:
 
-    - **semantic-release** to generate and update `CHANGELOG.md` on each release
-    - **semantic-release** to update the main version in `package.json` and `package-lock.json` on each release
+    - **semantic-release to generate** and update `CHANGELOG.md` on each release
+    - **semantic-release to update** the main version in `package.json` and `package-lock.json` on each release
 
 > [!TIP]
 >
