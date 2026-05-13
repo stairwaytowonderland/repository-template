@@ -28,7 +28,7 @@ A minimal starting point for a basic repository.
 └── README.md
 ```
 
-## Enabling Changelog Generation and Asset Modifications
+## Release: Enabling Changelog Generation and Asset Modifications
 
 To **generate a Changelog** and allow `git` to update the modified assets during a release, the appropriate `changelog`
 and `git` plugins must
