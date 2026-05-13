@@ -1,6 +1,6 @@
 {
 	"name": "repository-template",
-	"version": "1.2.0",
+	"version": "0.0.0",
 	"description": "A GitHub template repository",
 	"type": "module",
 	"engines": {
