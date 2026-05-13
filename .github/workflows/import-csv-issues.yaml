@@ -28,12 +28,12 @@ on:
 jobs:
   import-issues:
     name: Import Issues
-    uses: stairwaytowonderland/actions/.github/workflows/import-csv-issues.yaml@v1.29.0
+    uses: stairwaytowonderland/actions/.github/workflows/import-csv-issues.yaml@v1.30.0
     secrets:
       # github-token: ${{ secrets[inputs.secret-token-name] }}
       github-token: ${{ secrets.GH_PAT_CREATE_ISSUE }}
     with:
-      ref: 'v1.29.0'
+      ref: 'v1.30.0'
       batch: true
       csv-path: ${{ inputs.csv-path }}
       dry-run: ${{ inputs.dry-run }}
