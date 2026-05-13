@@ -84,4 +84,4 @@ be installed and/or configured.
 > and uploading it as an artifact** (without modifying `package.json`) is an alternative approach that could
 > *avoid any asset modifications* during a release.
 >
-> If using the alternative approach, only the `changelog` plugin needs to be installed/configured.
+> If using this **alternative approach**, only the `changelog` plugin needs to be installed/configured.
