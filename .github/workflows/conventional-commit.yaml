@@ -1,0 +1,10 @@
+name: Pre-commit
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    name: Run pre-commit
+    uses: stairwaytowonderland/actions/.github/workflows/conventional-commit.yaml@v1
