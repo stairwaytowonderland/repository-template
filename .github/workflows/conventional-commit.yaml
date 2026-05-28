@@ -1,10 +1,10 @@
-name: Pre-commit
+name: Conventional Commit Check
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  pre-commit:
-    name: Run pre-commit
+  conventional-commit:
+    name: Run conventional commit check
     uses: stairwaytowonderland/actions/.github/workflows/conventional-commit.yaml@v1
