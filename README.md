@@ -36,9 +36,11 @@ Update the [`README.md`](./README.md) (this file), [`CONTRIBUTING.md`](./CONTRIB
 files accordingly, and change any placeholders to suit your needs (e.g. the `[Organization Name]` and `[Repository Name]`
 placeholders in *CONTRIBUTING.md*).
 
-## Issues and PRs
-
-For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` *(.md)* files.
-
-To add those to your project, copy this organization's global defaults from the
+> [!TIP]
+>
+> ### Issues and PRs
+>
+> For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` *(.md)* files.
+>
+> To add those to your project, copy this organization's global defaults from the
 [**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github) *special* repo.
