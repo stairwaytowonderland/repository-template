@@ -10,12 +10,6 @@ A minimal starting point for a basic repository.
 ```none
 ./
 ├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── 01_bug_report.yml
-│   │   ├── 02_feature_request.yml
-│   │   ├── 03_documentation.yml
-│   │   ├── 04_task.yml
-│   │   └── config.yml
 │   ├── workflows/
 │   │   ├── ci.yaml
 │   │   ├── conventional-commit.yaml
@@ -23,8 +17,7 @@ A minimal starting point for a basic repository.
 │   │   ├── pre-commit.yaml
 │   │   ├── publish.yaml
 │   │   └── release.yaml
-│   ├── dependabot.yml
-│   └── PULL_REQUEST_TEMPLATE.md
+│   └── dependabot.yml
 ├── .editorconfig
 ├── .gitignore
 ├── .markdownlint.json
@@ -36,3 +29,16 @@ A minimal starting point for a basic repository.
 ├── README.md
 └── TODO.sample.csv
 ```
+
+## Using this template
+
+Update the [`README.md`](./README.md) (this file), [`CONTRIBUTING.md`](./CONTRIBUTING.md), and [`LICENSE`](./LICENSE)
+files accordingly, and change any placeholders to suit your needs (e.g. the `[Organization Name]` and `[Repository Name]`
+placeholders in *CONTRIBUTING.md*).
+
+## Issues and PRs
+
+For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` *(.md)* files.
+
+To add those to your project, copy this organization's global defaults from the
+[**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github) *special* repo.
