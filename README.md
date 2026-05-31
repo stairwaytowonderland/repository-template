@@ -42,6 +42,6 @@ placeholders in *CONTRIBUTING.md*).
 >
 > For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` *(.md)* files.
 >
-> If ***using this template in another org*, or to *add those templates to your project for futher customization***,
+> If ***using this template in another org*, or to *add those files to your project for futher customization***,
 > copy them from this organization's *special*
 > [**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github) repo.
