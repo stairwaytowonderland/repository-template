@@ -41,7 +41,7 @@ git clone git@github.com:stairwaytowonderland/repository-template.git
 ### Create a new repository from the command line
 
 ```bash
-# Delete the .git folder from cloned starter project
+# Delete the .git folder from cloned project
 rm -rf .git
 
 # Overwrite README with your content
