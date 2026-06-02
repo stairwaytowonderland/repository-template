@@ -24,7 +24,6 @@ A minimal starting point for a basic repository.
 ├── .pre-commit-config.yaml
 ├── .prettierignore
 ├── .prettierrc
-├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
 └── TODO.sample.csv
