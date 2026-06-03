@@ -91,7 +91,7 @@ Update the [`README.md`](./README.md) _(this file)_ and [`LICENSE`](./LICENSE) f
 
 ### Further customizations
 
-- **`CONTRIBUTING.md`:** For customized **contributing details**, copy the organization [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/CONTRIBUTING.md)
+- **`CONTRIBUTING.md`:** For customized **contributing details**, copy the organization [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
 file as a starting point.
 
 > [!TIP]
