@@ -86,7 +86,8 @@ file as a starting point.
 
 #### Issues and PRs
 
-For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_ files.
+For simplicity reasons, this template repo doesn't include the **`ISSUE_TEMPLATE`** and **`PULL_REQUEST_TEMPLATE`** _(.md)_
+files.
 
 If **_using this template in another org_, or to _add those files to your project for futher customization_**,
 copy them from this organization's _special_
