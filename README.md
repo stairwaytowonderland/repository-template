@@ -63,7 +63,7 @@ pre-commit install
 git add .
 
 # Second commit
-git commit -m "chore: Adding initial files"
+git commit -m "chore: adding initial files"
 
 # Set remote ...
 # To update the url (instead of add), use `git remote set-url origin <GIT_URL>`
