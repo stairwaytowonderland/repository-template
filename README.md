@@ -29,9 +29,9 @@ A minimal starting point for a basic repository.
 └── TODO.sample.csv
 ```
 
-## Getting Started
+## Getting started
 
-### Clone this Repo
+### Clone this repo
 
 ```bash
 git clone git@github.com:stairwaytowonderland/repository-template.git
@@ -73,7 +73,26 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 git push -u origin main
 ```
 
-## Essential Tools
+## Using this template
+
+Update the [**`README.md`**](./README.md) _(this file)_ and [**`LICENSE`**](./LICENSE) files accordingly.
+
+### Further customizations
+
+#### Contributing details
+
+For customized **contributing details**, copy the organization [**`CONTRIBUTING.md`**](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
+file as a starting point.
+
+#### Issues and PRs
+
+For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_ files.
+
+If **_using this template in another org_, or to _add those files to your project for futher customization_**,
+copy them from this organization's _special_
+[**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github) repo.
+
+## Essential tools
 
 - [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
 - [EditorConfig](https://editorconfig.org/)
@@ -83,23 +102,4 @@ git push -u origin main
 > [!NOTE]
 > For a more customized experience, some files might need to be excluded from _Prettier_.
 >
-> See the [official docs](https://prettier.io/docs/ignore) for details on ignoring code.
-
-## Using this template
-
-Update the [`README.md`](./README.md) _(this file)_ and [`LICENSE`](./LICENSE) files accordingly.
-
-### Further customizations
-
-- **`CONTRIBUTING.md`:** For customized **contributing details**, copy the organization [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
-file as a starting point.
-
-> [!TIP]
->
-> ### Issues and PRs
->
-> For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_ files.
->
-> If **_using this template in another org_, or to _add those files to your project for futher customization_**,
-> copy them from this organization's _special_
-> [**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github) repo.
+> See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
