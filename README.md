@@ -24,7 +24,6 @@ A minimal starting point for a basic repository.
 ├── .pre-commit-config.yaml
 ├── .prettierignore
 ├── .prettierrc
-├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
 └── TODO.sample.csv
@@ -88,9 +87,12 @@ git push -u origin main
 
 ## Using this template
 
-Update the [`README.md`](./README.md) (this file), [`CONTRIBUTING.md`](./CONTRIBUTING.md), and [`LICENSE`](./LICENSE)
-files accordingly, and change any placeholders to suit your needs (e.g. the `[Organization Name]` and `[Repository Name]`
-placeholders in _CONTRIBUTING.md_).
+Update the [`README.md`](./README.md) _(this file)_ and [`LICENSE`](./LICENSE) files accordingly.
+
+### Further customizations
+
+- **`CONTRIBUTING.md`:** For customized **contributing details**, copy the organization [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+file as a starting point.
 
 > [!TIP]
 >
