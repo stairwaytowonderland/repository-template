@@ -13,14 +13,6 @@ on:
         required: false
         default: '.pre-commit-config.yaml'
 
-  workflow_dispatch:
-    inputs:
-      config:
-        description: 'Path to the pre-commit config file.'
-        type: string
-        required: false
-        default: '.pre-commit-config.yaml'
-
 jobs:
   pre-commit:
     name: Run pre-commit
