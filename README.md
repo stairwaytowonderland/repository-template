@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/stairwaytowonderland/repository-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/stairwaytowonderland/repository-template/actions/workflows/ci.yaml)
 
-A minimal starting point for a basic repository.
+A minimal starting point for a basic repository. :rocket:
 
 ## Project structure
 
@@ -33,13 +33,25 @@ A minimal starting point for a basic repository.
 
 ## Getting started
 
-### Clone this repo
+### Option 1: Use this template
+
+1. Click the **Use this template** button at the top of the repository
+1. Select **Create a new repository**
+1. Select an owner and name for your new repository
+1. Click **Create repository**
+1. Clone your new repository
+
+> [!IMPORTANT]
+>
+> Make sure to  update the [**`README.md`**](./README.md) _(this file)_ and [**`LICENSE`**](./LICENSE) files accordingly.
+
+### Option 2: Clone this repo
 
 ```bash
 git clone git@github.com:stairwaytowonderland/repository-template.git
 ```
 
-### Create a new repository from the command line
+#### Create a new repository from the command line
 
 ```bash
 # Delete the .git folder from cloned project
@@ -75,34 +87,41 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 git push -u origin main
 ```
 
-## Using this template
+## Further customizations
 
-Update the [**`README.md`**](./README.md) _(this file)_ and [**`LICENSE`**](./LICENSE) files accordingly.
+### Contributing details
 
-### Further customizations
+For customized **contributing details**, create a `CONTRIBUTING.md` in this repo:
 
-#### Contributing details
+```bash
+echo "# Contributing Guidelines" > CONTRIBUTING.md
+```
 
-For customized **contributing details**, copy the organization [**`CONTRIBUTING.md`**](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
-file as a starting point.
+> [!TIP]
+>
+> You may copy the organization [**`CONTRIBUTING.md`**](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
+> file as a starting point.
 
-#### Issues and PRs
+### Issues and PRs
 
-For simplicity reasons, this template repo doesn't include the **`ISSUE_TEMPLATE`** and **`PULL_REQUEST_TEMPLATE`** _(.md)_
+For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_
 files.
 
-If **_using this template in another org_, or to _add those files to your project for futher customization_**,
-copy them from this organization's _special_
-[**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github) repo.
+> [!TIP]
+>
+> If **_using this template in another org_, or to _add those files to your project for futher customization_**, copy
+> them from this organization's _special_ [**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github)
+> repo.
 
 ## Essential tools
 
 - [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
 - [EditorConfig](https://editorconfig.org/)
 - [Prettier](https://prettier.io/)
-- [pre-commit](https://pre-commit.com/)
+    > [!NOTE]
+    >
+    > For a more customized experience, some files might need to be excluded from _Prettier_.
+    >
+    > See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
 
-> [!NOTE]
-> For a more customized experience, some files might need to be excluded from _Prettier_.
->
-> See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
+- [pre-commit](https://pre-commit.com/)
