@@ -1,5 +1,7 @@
 # Repository Template
 
+[![CI](https://github.com/stairwaytowonderland/repository-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/stairwaytowonderland/repository-template/actions/workflows/ci.yaml)
+
 A minimal starting point for a basic repository.
 
 ## Project structure
