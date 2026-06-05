@@ -15,6 +15,7 @@ A minimal starting point for a basic repository. :rocket:
 │   ├── workflows/
 │   │   ├── ci.yaml
 │   │   ├── conventional-commit.yaml
+│   │   ├── create-labels.yaml
 │   │   ├── import-csv-issues.yaml
 │   │   ├── pre-commit.yaml
 │   │   ├── publish.yaml
