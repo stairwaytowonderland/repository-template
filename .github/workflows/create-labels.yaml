@@ -21,7 +21,7 @@ on:
 
 jobs:
   create-labels:
-    name: Ensure only needed labels exist
+    name: Create labels
     uses: stairwaytowonderland/actions/.github/workflows/create-labels.yaml@v1
     with:
       ref: ${{ inputs.ref }}
