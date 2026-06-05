@@ -118,11 +118,9 @@ files.
 - [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
 - [EditorConfig](https://editorconfig.org/)
 - [Prettier](https://prettier.io/)
-
-    > [!NOTE]
-    >
-    > For a more customized experience, some files might need to be excluded from _Prettier_.
-    >
-    > See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
-
+   > [!NOTE]
+   >
+   > For a more customized experience, some files might need to be excluded from _Prettier_.
+   >
+   > See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
 - [pre-commit](https://pre-commit.com/)
