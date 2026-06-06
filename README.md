@@ -50,7 +50,7 @@ A minimal starting point for a basic repository. :rocket:
 
 > [!IMPORTANT]
 >
-> Make sure to  update the [**`README.md`**](./README.md) _(this file)_ and [**`LICENSE`**](./LICENSE) files accordingly.
+> Make sure to  update the [`README.md`](./README.md) _(this file)_ and [`LICENSE`](./LICENSE) files accordingly.
 
 ### Option 2: Clone this repo
 
@@ -106,7 +106,7 @@ echo "# Contributing Guidelines" > CONTRIBUTING.md
 
 > [!TIP]
 >
-> You may copy the organization [**`CONTRIBUTING.md`**](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
+> You may copy the organization [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
 > file as a starting point.
 
 ### Issues and PRs
@@ -117,8 +117,7 @@ files.
 > [!TIP]
 >
 > If **_using this template in another org_, or to _add those files to your project for futher customization_**, copy
-> them from this organization's _special_ [**.github**](https://github.com/stairwaytowonderland/.github/tree/main/.github)
-> repo.
+> them from this organization's [_special .github repo_](https://github.com/stairwaytowonderland/.github/tree/main/.github).
 
 ## Essential tools
 
@@ -128,4 +127,4 @@ files.
 - [Prettier](https://prettier.io/)
   > **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
   >
-  > See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
+  > See the [official docs](https://prettier.io/docs/ignore) for details on ignoring code.
