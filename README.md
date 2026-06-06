@@ -8,8 +8,7 @@
 ![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)
 [![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 
-A minimal starting point for a basic repository.
-:surfer: :rocket: :milky_way: :monkey:
+A minimal starting point for a basic repository. :rocket:
 
 ## Project structure
 
