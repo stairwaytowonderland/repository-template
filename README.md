@@ -6,8 +6,8 @@
 [![GitHub license](https://img.shields.io/github/license/stairwaytowonderland/repository-template?logo=opensourceinitiative&color=yellow)](https://github.com/stairwaytowonderland/repository-template/tree/main/LICENSE)
 
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-[![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 ![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)
+[![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 
 A minimal starting point for a basic repository. :rocket:
 
