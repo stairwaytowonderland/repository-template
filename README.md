@@ -126,6 +126,6 @@ files.
 - [EditorConfig](https://editorconfig.org/)
 - [pre-commit](https://pre-commit.com/)
 - [Prettier](https://prettier.io/)
-    > **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
-    >
-    > See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
+  > **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
+  >
+  > See the [**official docs**](https://prettier.io/docs/ignore) for details on ignoring code.
