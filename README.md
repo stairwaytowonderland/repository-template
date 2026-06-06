@@ -4,7 +4,6 @@
 [![GitHub latest release](https://img.shields.io/github/v/release/stairwaytowonderland/repository-template?include_prereleases&logo=rocket)](https://github.com/stairwaytowonderland/repository-template/releases)
 [![GitHub last commit](https://img.shields.io/github/last-commit/stairwaytowonderland/repository-template/main?logo=git)](https://github.com/stairwaytowonderland/repository-template/commits/main)
 [![GitHub license](https://img.shields.io/github/license/stairwaytowonderland/repository-template?logo=opensourceinitiative&labelCol&color=yellow&logoColor=white)](https://github.com/stairwaytowonderland/repository-template/tree/main/LICENSE)
-
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 ![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)
 [![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
