@@ -192,7 +192,7 @@ echo "# Contributing Guidelines" > CONTRIBUTING.md
 > [!TIP]
 >
 > You may copy this organization's [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
-> file as a quicker starting point.
+> file as a starting point.
 
 ### Issues and PRs
 
