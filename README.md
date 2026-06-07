@@ -189,10 +189,10 @@ For customized **contributing details**, create a `CONTRIBUTING.md` in this repo
 echo "# Contributing Guidelines" > CONTRIBUTING.md
 ```
 
-> [!NOTE]
+> [!TIP]
 >
-> You may copy the organization [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
-> file as a starting point.
+> You may copy this organization's [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
+> file as a quicker starting point.
 
 ### Issues and PRs
 
