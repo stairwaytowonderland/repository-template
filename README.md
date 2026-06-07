@@ -99,21 +99,21 @@ git push -u origin main
   [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
 - The allowed tags for this project are the following:
 
-```json
-[
-  "build",
-  "chore",
-  "ci",
-  "docs",
-  "feat",
-  "fix",
-  "perf",
-  "refactor",
-  "revert",
-  "style",
-  "test"
-]
-```
+    ```json
+    [
+      "build",
+      "chore",
+      "ci",
+      "docs",
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test"
+    ]
+    ```
 
 > [!NOTE]
 >
@@ -121,15 +121,54 @@ git push -u origin main
 
 ## Releasing
 
-This project uses **`semantic-release`** with the _conventionalcommits_ preset by default, as well as _default_
-[`package.json`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
-and [`.releaserc`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json) files.
+This project uses **`semantic-release`** with the _conventionalcommits_ preset by default _(see [`.releaserc`](./.releaserc))_.
+
+If a `package.json` file is not included, a [_default `package.json`_](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
+will be used.
 
 **The creation of tags and releases is handled _automatically_ by the pre-configured workflows.**
 
 > [!TIP]
 >
 > In most cases, only the `.releaserc` needs to by _copied/customized_.
+
+### Adding a `CHANGELOG`
+
+To have the generated `CHANGELOG` automatically committed,
+add the `@semantic-release/git` _plugin_ configuration **to the end of the _plugins_ section** in your [`.releaserc`](./.releaserc):
+
+```json
+[
+  "@semantic-release/git",
+  {
+    "assets": ["CHANGELOG.md"],
+    "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+  }
+]
+```
+
+> [!NOTE]
+>
+> If using an altered or differet `.releaserc` file, you must also ensure the `@semantic-release/changelog` _plugin_ is
+> configured:
+>
+> ```json
+> [
+>   "@semantic-release/changelog",
+>   {
+>     "changelogFile": "CHANGELOG.md"
+>   }
+> ]
+> ```
+
+### Plugin ordering
+
+> [!IMPORTANT]
+>
+> The **order of plugins DOES matter** in the _release configuration file (`.releaserc`)_!
+>
+> The `@semantic-release/changelog` plugin is typically one of the first in the _`plugins` array_, **after** `semantic-release-export-data`
+> but **before** `@semantic-release/commit-analyzer`.
 
 ## Further customizations
 
@@ -141,7 +180,7 @@ For customized **contributing details**, create a `CONTRIBUTING.md` in this repo
 echo "# Contributing Guidelines" > CONTRIBUTING.md
 ```
 
-> [!TIP]
+> [!NOTE]
 >
 > You may copy the organization [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
 > file as a starting point.
@@ -151,7 +190,7 @@ echo "# Contributing Guidelines" > CONTRIBUTING.md
 For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_
 files.
 
-> [!TIP]
+> [!NOTE]
 >
 > If **_using this template in another org_, or to _add those files to your project for futher customization_**, copy
 > them from this organization's [_special .github repo_](https://github.com/stairwaytowonderland/.github/tree/main/.github).
