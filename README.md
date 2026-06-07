@@ -93,6 +93,32 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 git push -u origin main
 ```
 
+## Commit Message Guidelines
+
+- Write clear, concise commit messages that follow the
+  [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
+- The allowed tags for this project are the following:
+
+```json
+[
+  "build",
+  "chore",
+  "ci",
+  "docs",
+  "feat",
+  "fix",
+  "perf",
+  "refactor",
+  "revert",
+  "style",
+  "test"
+]
+```
+
+> [!NOTE]
+>
+> See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blog/main/CONTRIBUTING.md) for more information.
+
 ## Releasing
 
 This project uses **`semantic-release`** with the _conventionalcommits_ preset by default, as well as _default_
@@ -129,32 +155,6 @@ files.
 >
 > If **_using this template in another org_, or to _add those files to your project for futher customization_**, copy
 > them from this organization's [_special .github repo_](https://github.com/stairwaytowonderland/.github/tree/main/.github).
-
-## Commit Message Guidelines
-
-- Write clear, concise commit messages that follow the
-  [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
-- The allowed tags for this project are the following:
-
-```json
-[
-  "build",
-  "chore",
-  "ci",
-  "docs",
-  "feat",
-  "fix",
-  "perf",
-  "refactor",
-  "revert",
-  "style",
-  "test"
-]
-```
-
-> [!NOTE]
->
-> See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blog/main/CONTRIBUTING.md) for more information.
 
 ## Essential tools
 
