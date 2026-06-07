@@ -117,7 +117,7 @@ git push -u origin main
 
 > [!NOTE]
 >
-> See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blog/main/CONTRIBUTING.md) for more information.
+> See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md) for more information.
 
 ## Releasing
 
