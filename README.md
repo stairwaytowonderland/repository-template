@@ -121,9 +121,11 @@ git push -u origin main
 >
 > See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md) for more information.
 
+---
+
 ## Releasing
 
-This project uses **`semantic-release`** with the _conventionalcommits_ preset by default.
+This template uses **`semantic-release`** with the _conventionalcommits_ preset by default.
 
 ### Tags/Releases
 
