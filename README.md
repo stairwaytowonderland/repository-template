@@ -124,37 +124,42 @@ git push -u origin main
 
 ## Releasing
 
-This project uses **`semantic-release`** with the _conventionalcommits_ preset by default _(see [`.releaserc`](./.releaserc))_.
+This project uses **`semantic-release`** with the _conventionalcommits_ preset by default.
 
 ### Tags/Releases
 
-**The creation of tags and releases is handled _automatically_ by the pre-configured workflows.**
+**The creation of tags and releases is handled _automatically_ by the pre-configured [_workflows_](./.github/workflows/).**
 
-If a `package.json` file is not included _(this template doesn't include one)_, a _default_[_`package.json`_](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
-will be used.
+_Default [`package.json`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
+and [`.releaserc`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)
+files_ will be used instead of being included in this template, however those files can be copied into this project for
+additional customizations, such as [including a `CHANGELOG`](#including-a-changelog).
 
 > [!TIP]
 >
 > In most cases, only the `.releaserc` needs to by _copied/customized_.
 
-### Adding a `CHANGELOG`
+### Including a `CHANGELOG`
 
-To have the generated `CHANGELOG` automatically committed,
-add the `@semantic-release/git` _plugin_ configuration **to the end of the _plugins_ section** in your [`.releaserc`](./.releaserc):
+To have the generated `CHANGELOG` automatically committed:
 
-```json
-[
-  "@semantic-release/git",
-  {
-    "assets": ["CHANGELOG.md"],
-    "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
-  }
-]
-```
+1. Copy the _default [.releaserc](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)_
+file into your project.
+2. Add the `@semantic-release/git` _plugin_ configuration **to the end of the _plugins_ section** in your [`.releaserc`](./.releaserc):
+
+    ```json
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+      }
+    ]
+    ```
 
 > [!NOTE]
 >
-> If using an altered or differet `.releaserc` file, you must also ensure the `@semantic-release/changelog` _plugin_ is
+> If using an altered or different `.releaserc` file, you must also ensure the `@semantic-release/changelog` _plugin_ is
 > configured:
 >
 > ```json
