@@ -94,7 +94,9 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 git push -u origin main
 ```
 
-## Commit Message Guidelines
+## Contributing
+
+### Commit Message Guidelines
 
 - Write clear, concise commit messages that follow the
   [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
