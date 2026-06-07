@@ -123,7 +123,7 @@ git push -u origin main
 
 This project uses **`semantic-release`** with the _conventionalcommits_ preset by default _(see [`.releaserc`](./.releaserc))_.
 
-If a `package.json` file is not included, a [_default `package.json`_](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
+If a `package.json` file is not included, a _default_[_`package.json`_](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
 will be used.
 
 **The creation of tags and releases is handled _automatically_ by the pre-configured workflows.**
