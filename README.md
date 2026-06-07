@@ -32,7 +32,6 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 ├── .pre-commit-config.yaml
 ├── .prettierignore
 ├── .prettierrc
-├── .releaserc
 ├── LICENSE
 ├── README.md
 └── TODO.sample.csv
