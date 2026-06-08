@@ -27,3 +27,5 @@ jobs:
       ref: ${{ inputs.ref }}
       dry-run: ${{ inputs.dry-run }}
       update-existing: ${{ inputs.update-existing }}
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
