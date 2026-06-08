@@ -29,3 +29,5 @@ jobs:
       dispatch-workflow: ${{ inputs.dispatch-workflow }}
       fail-on-no-release: ${{ inputs.fail-on-no-release }}
       ref: ${{ inputs.ref || github.ref }}
+    secrets:
+      github-token: ${{ secrets.github-token || secrets.GH_PAT_CREATE_RELEASE }}
