@@ -11,6 +11,7 @@ repos:
         args: [--markdown-linebreak-ext=md]
       - id: mixed-line-ending
       - id: end-of-file-fixer
+        exclude: \.csv$
       - id: check-added-large-files
       - id: check-ast
       - id: check-json
@@ -46,7 +47,7 @@ repos:
     rev: v0.11.0.1
     hooks:
       - id: shellcheck
-        args: ["-x"]
+        args: ['-x']
 
   # - repo: https://github.com/psf/black-pre-commit-mirror
   #   rev: 25.12.0

@@ -26,7 +26,7 @@
 	"files.eol": "\n",
 	"files.encoding": "utf8",
 	"files.trimTrailingWhitespace": true,
-	"files.insertFinalNewline": true,
+	"files.insertFinalNewline": false,
 	"files.associations": {
 		"*.Brewfile": "ruby",
 		"*.cron": "shellscript",
