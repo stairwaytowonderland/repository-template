@@ -224,5 +224,5 @@ files.
 
 > [!NOTE]
 >
-> See [Contributing Guidelines](https://github.com/stairwaytowonderland/repository-template?tab=contributing-ov-file)
+> See [Contributing Guidelines](https://github.com/stairwaytowonderland/repository-template?tab=contributing-ov-file#contributing-guidelines)
 > for more information.
