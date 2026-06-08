@@ -74,7 +74,7 @@ git clone git@github.com:stairwaytowonderland/repository-template.git
 rm -rf .git
 
 # Overwrite README with your content
-echo "# my-fun-project" >> README.md
+echo "# Repository Template" > README.md
 
 # Initialize new git local repository
 git init
