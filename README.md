@@ -37,6 +37,14 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 └── TODO.example.csv
 ```
 
+## :white_check_mark: Good first tasks
+
+- [ ] **Create your repo:** Use this template to create your own repo.
+- [ ] **Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
+  _workflow_ to create some additional useful labels.
+- [ ] **Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
+  _workflow_ to create your first issues.
+
 ---
 
 ## Getting started
@@ -94,13 +102,6 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 # Push to remote
 git push -u origin main
 ```
-
-### :white_check_mark: Good first tasks
-
-- [ ] **Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
-  _workflow_ to create some additional useful labels.
-- [ ] **Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
-  _workflow_ to create your first issues.
 
 ## Releasing
 
