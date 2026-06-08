@@ -37,8 +37,6 @@ jobs:
     with:
       # dispatch-workflow: publish.yaml
       fail-on-no-release: ${{ inputs.fail-on-no-release || false }}
-    secrets:
-      github-token: ${{ secrets.GH_PAT_CREATE_RELEASE }}
 
   publish:
     name: Publish
@@ -46,8 +44,6 @@ jobs:
     uses: ./.github/workflows/publish.yaml
     with:
       tag: ${{ github.ref_name }}
-    secrets:
-      github-token: ${{ secrets.GH_PAT_CREATE_RELEASE }}
 
   update-majorver:
     name: Update Major Version Tag
