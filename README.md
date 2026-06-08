@@ -37,6 +37,8 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 └── TODO.sample.csv
 ```
 
+---
+
 ## Getting started
 
 ### Option 1: Use this template
@@ -49,7 +51,7 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 
 > [!IMPORTANT]
 >
-> Make sure to  update the [`README.md`](./README.md) _(this file)_ and [`LICENSE`](./LICENSE) files accordingly.
+> Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly.
 
 ### Option 2: Clone this repo
 
@@ -92,36 +94,6 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 # Push to remote
 git push -u origin main
 ```
-
-## Contributing
-
-### Commit Message Guidelines
-
-- Write clear, concise commit messages that follow the
-  [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
-- The allowed tags for this project are the following:
-
-    ```json
-    [
-      "build",
-      "chore",
-      "ci",
-      "docs",
-      "feat",
-      "fix",
-      "perf",
-      "refactor",
-      "revert",
-      "style",
-      "test"
-    ]
-    ```
-
-> [!NOTE]
->
-> See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md) for more information.
-
----
 
 ## Releasing
 
@@ -215,3 +187,33 @@ files.
   > **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
   >
   > See the [official docs](https://prettier.io/docs/ignore) for details on ignoring code.
+
+---
+
+## Contributing
+
+### Commit Message Guidelines
+
+- Write clear, concise commit messages that follow the
+  [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
+- The allowed tags for this project are the following:
+
+    ```json
+    [
+      "build",
+      "chore",
+      "ci",
+      "docs",
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test"
+    ]
+    ```
+
+> [!NOTE]
+>
+> See [Contributing Guidelines](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md) for more information.
