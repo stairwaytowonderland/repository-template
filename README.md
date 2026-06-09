@@ -47,7 +47,7 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 
 ---
 
-## Getting started
+## :rocket: Getting started
 
 ### Option 1: Use this template
 
@@ -103,7 +103,7 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 git push -u origin main
 ```
 
-## Releasing
+## :label: Releasing
 
 This template uses **`semantic-release`** with the _conventionalcommits_ preset by default.
 
@@ -161,7 +161,7 @@ file into your project.
 > The `@semantic-release/changelog` plugin is typically one of the first in the _`plugins` array_, **after** `semantic-release-export-data`
 > but **before** `@semantic-release/commit-analyzer`.
 
-## Further customizations
+## :paintbrush: Further customizations
 
 ### Contributing details
 
@@ -186,7 +186,7 @@ files.
 > If **_using this template in another org_, or to _add those files to your project for futher customization_**, copy
 > them from this organization's [_special .github repo_](https://github.com/stairwaytowonderland/.github/tree/main/.github).
 
-## Essential tools
+## :surfer: Essential tools
 
 - [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
 - [EditorConfig](https://editorconfig.org/)
@@ -198,7 +198,7 @@ files.
 
 ---
 
-## Contributing
+## :memo: Contributing
 
 ### Commit Message Guidelines
 
