@@ -7,11 +7,12 @@
 [![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-cc-FE5196?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 
-A minimal starting point for a basic repository. :surfer: :rocket: :flying_saucer: :milky_way: :monkey:
+A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flying_saucer: :ringed_planet: :milky_way: :alien:
 
-## Project structure
+## :cactus: Project structure
 
 > [!NOTE]
+>
 > `tree -a -F -L 3 -I '.git|.vscode' --gitignore --dirsfirst .`
 
 ```none
@@ -49,7 +50,7 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 
 ## :rocket: Getting started
 
-### Option 1: Use this template
+### :a: Option "A": Use this template
 
 1. Click the **Use this template** button at the top of the repository
 1. Select **Create a new repository**
@@ -61,7 +62,7 @@ A minimal starting point for a basic repository. :surfer: :rocket: :flying_sauce
 >
 > Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly.
 
-### Option 2: Clone this repo
+### :b: Option "B": Clone this repo
 
 ```bash
 git clone git@github.com:stairwaytowonderland/repository-template.git
@@ -103,24 +104,24 @@ git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
 git push -u origin main
 ```
 
-## :label: Releasing
+## :package: Releasing
 
 This template uses **`semantic-release`** with the _conventionalcommits_ preset by default.
 
-### Tags/Releases
+### :label: Tags/Releases
 
 **The creation of tags and releases is handled _automatically_ by the pre-configured [_workflows_](./.github/workflows/).**
 
 _Default [`package.json`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
 and [`.releaserc`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)
 files_ will be used instead of being included in this template, however those files can be copied into this project for
-additional customizations, such as [including a `CHANGELOG`](#including-a-changelog).
+additional customizations, such as [including a `CHANGELOG`](#page_with_curl-including-a-changelog).
 
 > [!TIP]
 >
 > In most cases, only the `.releaserc` needs to by _copied/customized_.
 
-### Including a `CHANGELOG`
+### :page_with_curl: Including a `CHANGELOG`
 
 To have the generated `CHANGELOG` automatically committed:
 
@@ -152,7 +153,7 @@ file into your project.
 > ]
 > ```
 
-### Plugin ordering
+### :electric_plug: _"RC"_ Plugin ordering
 
 > [!IMPORTANT]
 >
@@ -163,7 +164,7 @@ file into your project.
 
 ## :paintbrush: Further customizations
 
-### Contributing details
+### :fountain_pen: Contributing details
 
 For customized **contributing details**, create a `CONTRIBUTING.md` in this repo:
 
@@ -176,7 +177,7 @@ echo "# Contributing Guidelines" > CONTRIBUTING.md
 > You may copy this organization's [`CONTRIBUTING.md`](https://github.com/stairwaytowonderland/.github/blob/main/CONTRIBUTING.md)
 > file as a starting point.
 
-### Issues and PRs
+### :lady_beetle: Issues and PRs
 
 For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_
 files.
@@ -192,15 +193,15 @@ files.
 - [EditorConfig](https://editorconfig.org/)
 - [pre-commit](https://pre-commit.com/)
 - [Prettier](https://prettier.io/)
-  > **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
+  > :memo: **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
   >
   > See the [official docs](https://prettier.io/docs/ignore) for details on ignoring code.
 
 ---
 
-## :memo: Contributing
+## :sparkles: Contributing
 
-### Commit Message Guidelines
+### :robot: Commit Message Guidelines
 
 - Write clear, concise commit messages that follow the
   [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
