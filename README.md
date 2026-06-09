@@ -161,7 +161,7 @@ file into your project.
 > The `@semantic-release/changelog` plugin is typically one of the first in the _`plugins` array_, **after** `semantic-release-export-data`
 > but **before** `@semantic-release/commit-analyzer`.
 
-## :fountain_pen: Further customizations
+## :paintbrush: Further customizations
 
 ### Contributing details
 
