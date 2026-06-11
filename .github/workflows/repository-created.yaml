@@ -12,12 +12,16 @@ jobs:
         run: |
           echo "A new repository was created!"
           echo "Name: $CREATED_REPO_NAME"
-          if [ -n "$SENDER_LOGIN" ] && [ -n "$SENDER_ID" ]; then
-            echo "Created by: $SENDER_LOGIN (ID: $SENDER_ID)"
-          fi
           echo "Repository URL: $CREATED_REPO_URL"
+          echo "Sender Login: $SENDER_REPO_LOGIN"
+          echo "Sender URL: $SENDER_REPO_URL"
+          echo "Sender ID: $SENDER_REPO_ID"
+          echo "Sender Type: $SENDER_REPO_TYPE"
         env:
           CREATED_REPO_NAME: ${{ github.event.client_payload.repository.name }}
           CREATED_REPO_URL: ${{ github.event.client_payload.repository.url }}
-          SENDER_LOGIN: ${{ github.event.client_payload.sender.login }}
-          SENDER_ID: ${{ github.event.client_payload.sender.id }}
+          SENDER_REPO_FULL_NAME: ${{ github.event.client_payload.sender.full_name }}
+          SENDER_REPO_URL: ${{ github.event.client_payload.sender.html_url }}
+          SENDER_REPO_LOGIN: ${{ github.event.client_payload.sender.owner.login }}
+          SENDER_REPO_ID: ${{ github.event.client_payload.sender.owner.id }}
+          SENDER_REPO_TYPE: ${{ github.event.client_payload.sender.owner.type }}
