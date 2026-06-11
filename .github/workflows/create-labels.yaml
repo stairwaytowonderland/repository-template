@@ -28,8 +28,8 @@ jobs:
     # if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     uses: stairwaytowonderland/actions/.github/workflows/create-labels.yaml@v1
     with:
-      ref: ${{ inputs.ref || 'v1' }}
-      dry-run: ${{ inputs.dry-run || 'false' }}
-      update-existing: ${{ inputs.update-existing || 'false' }}
+      ref: ${{ inputs.ref }}
+      dry-run: ${{ inputs.dry-run || false }}
+      update-existing: ${{ inputs.update-existing || false }}
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
