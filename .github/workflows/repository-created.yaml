@@ -6,7 +6,7 @@ on:
 
 jobs:
   on-create:
-    name: Handle Repository Created Event
+    name: Repository created
     uses: stairwaytowonderland/actions/.github/workflows/repository-created.yaml@v1
     with:
       repo: ${{ github.event.client_payload.repository.name }}
