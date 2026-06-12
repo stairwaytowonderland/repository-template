@@ -1,4 +1,4 @@
-name: Handle New Repository
+name: _Initialize Repository_
 
 on:
   repository_dispatch:
