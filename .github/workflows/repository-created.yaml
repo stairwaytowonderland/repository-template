@@ -1,4 +1,4 @@
-name: _created_
+name: _
 
 on:
   repository_dispatch:
