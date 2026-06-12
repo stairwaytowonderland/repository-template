@@ -19,7 +19,7 @@ on:
         default: 'v1'
 
   workflow_run:
-    workflows: ['Handle New Repository']
+    workflows: ['_']
     types:
       - completed
 
