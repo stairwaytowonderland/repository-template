@@ -1,4 +1,4 @@
-name: '_Initialize Repository_'
+name: _created_
 
 on:
   repository_dispatch:
