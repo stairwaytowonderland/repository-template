@@ -7,6 +7,7 @@ on:
         description: 'Dry run'
         required: false
         type: boolean
+        default: true
       update-existing:
         description: 'Whether to update existing labels (e.g. rename, change color/description).'
         required: false
