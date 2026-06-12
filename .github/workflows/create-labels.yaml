@@ -30,7 +30,7 @@ jobs:
     uses: stairwaytowonderland/actions/.github/workflows/create-labels.yaml@v1
     with:
       ref: ${{ inputs.ref }}
-      dry-run: ${{ inputs.dry-run || false }}
+      dry-run: true
       update-existing: ${{ inputs.update-existing || false }}
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
