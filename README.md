@@ -25,6 +25,7 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flyi
 │   │   ├── import-csv-issues.yaml
 │   │   ├── pre-commit.yaml
 │   │   ├── publish.yaml
+│   │   ├── repository-created.yaml
 │   │   └── release.yaml
 │   └── dependabot.yml
 ├── .editorconfig
@@ -35,6 +36,7 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flyi
 ├── .prettierrc
 ├── LICENSE
 ├── README.md
+└── TODO.csv
 └── TODO.example.csv
 ```
 
