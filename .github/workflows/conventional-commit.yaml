@@ -15,7 +15,7 @@ on:
 
 jobs:
   conventional-commit:
-    name: Run conventional commit check
+    name: Run Conventional Commit Check
     uses: stairwaytowonderland/actions/.github/workflows/conventional-commit.yaml@v1
     with:
       ref: ${{ inputs.ref }}
