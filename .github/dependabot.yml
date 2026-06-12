@@ -1,11 +1,11 @@
 version: 2
-registries:
-  # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
-  github:
-    type: git
-    url: https://github.com/
-    username: x-access-token
-    password: ${{ secrets.GH_PAT_DEPENDABOT }}
+# registries:
+#   # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
+#   github:
+#     type: git
+#     url: https://github.com/
+#     username: x-access-token
+#     password: ${{ secrets.GH_PAT_DEPENDABOT }}
 updates:
   # - package-ecosystem: 'npm'
   #   directory: '/'
@@ -43,7 +43,7 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-    registries: ['github']
+    # registries: ['github']
     labels: ['dependencies', 'github-actions']
     open-pull-requests-limit: 5
     rebase-strategy: 'auto'
