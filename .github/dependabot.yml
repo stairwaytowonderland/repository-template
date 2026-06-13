@@ -20,7 +20,7 @@ updates:
       interval: 'weekly'
       timezone: 'America/Chicago'
     labels: ['dependencies', 'dependencies:github-actions']
-    assignees: ['stairwaytowonderland/owners']
+    assignees: ['@stairwaytowonderland/owners']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
   # - package-ecosystem: 'npm'
