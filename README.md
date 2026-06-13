@@ -22,11 +22,13 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flyi
 │   │   ├── ci.yaml
 │   │   ├── conventional-commit.yaml
 │   │   ├── create-labels.yaml
+│   │   ├── dependabot-tests.yaml
 │   │   ├── import-csv-issues.yaml
 │   │   ├── pre-commit.yaml
 │   │   ├── publish.yaml
-│   │   ├── repository-created.yaml
-│   │   └── release.yaml
+│   │   ├── release.yaml
+│   │   └── repository-created.yaml
+│   ├── CODEOWNERS
 │   └── dependabot.yml
 ├── .editorconfig
 ├── .gitignore
@@ -36,7 +38,7 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flyi
 ├── .prettierrc
 ├── LICENSE
 ├── README.md
-└── TODO.csv
+├── TODO.csv
 └── TODO.example.csv
 ```
 
