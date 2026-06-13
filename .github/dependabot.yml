@@ -20,7 +20,6 @@ updates:
       interval: 'weekly'
       timezone: 'America/Chicago'
     labels: ['dependencies', 'dependencies:github-actions']
-    assignees: ['@stairwaytowonderland/owners']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
   # - package-ecosystem: 'npm'
@@ -32,7 +31,6 @@ updates:
   #     - dependency-name: '*'
   #       update-types: ['version-update:semver-major']
   #   labels: ['dependencies', 'dependencies:npm']
-  #   assignees: ['andrewhaller']
   #   groups:
   #     npm:
   #       applies-to: version-updates
@@ -46,7 +44,6 @@ updates:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
   #   labels: ['dependencies', 'dependencies:python']
-  #   assignees: ['andrewhaller']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
   # - package-ecosystem: 'docker'
@@ -55,7 +52,6 @@ updates:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
   #   labels: ['dependencies', 'dependencies:docker']
-  #   assignees: ['andrewhaller']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
   # - package-ecosystem: 'terraform'
@@ -66,6 +62,5 @@ updates:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
   #   labels: ['dependencies', 'dependencies:terraform']
-  #   assignees: ['andrewhaller']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
