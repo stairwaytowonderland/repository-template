@@ -1,6 +1,9 @@
 name: Create Labels
 
 on:
+  repository_dispatch:
+    types: [create-labels]
+
   workflow_dispatch:
     inputs:
       dry-run:
@@ -11,17 +14,13 @@ on:
         description: 'Whether to update existing labels (e.g. rename, change color/description).'
         type: boolean
 
-  workflow_run:
-    workflows: ['_']
-    types: [completed]
-
 jobs:
   create-labels:
     name: Create Labels
     # if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     uses: stairwaytowonderland/label-management/.github/workflows/create-labels.yaml@v1
     with:
-      dry-run: ${{ inputs.dry-run || github.event.workflow_run.conclusion != 'success' }}
+      dry-run: ${{ inputs.dry-run || false }}
       update-existing: ${{ inputs.update-existing || false }}
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}

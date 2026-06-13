@@ -5,6 +5,9 @@ concurrency:
   cancel-in-progress: false
 
 on:
+  repository_dispatch:
+    types: [create-issues]
+
   workflow_dispatch:
     inputs:
       dry-run:
