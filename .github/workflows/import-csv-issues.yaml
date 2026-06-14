@@ -28,5 +28,5 @@ jobs:
       github-token: ${{ secrets.GH_PAT_CREATE_ISSUE }}
     with:
       batch: true
-      csv-path: ${{ inputs.csv-path }}
-      dry-run: ${{ inputs.dry-run }}
+      csv-path: ${{ inputs.csv-path || 'TODO.csv' }}
+      dry-run: ${{ inputs.dry-run || false }}
