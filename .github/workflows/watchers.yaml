@@ -1,0 +1,13 @@
+name: Watchers
+
+on:
+  watch:
+    types: [started]
+
+jobs:
+  on-watch:
+    name: Watching the watchers
+    uses: stairwaytowonderland/actions/.github/workflows/watchers.yaml@v1
+    secrets: inherit
+    # with:
+    #   create-issue: true
