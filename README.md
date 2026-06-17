@@ -27,7 +27,8 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flyi
 │   │   ├── pre-commit.yaml
 │   │   ├── publish.yaml
 │   │   ├── release.yaml
-│   │   └── repository-created.yaml
+│   │   ├── repository-created.yaml
+│   │   └── watchers.yaml
 │   ├── CODEOWNERS
 │   └── dependabot.yml
 ├── .editorconfig
