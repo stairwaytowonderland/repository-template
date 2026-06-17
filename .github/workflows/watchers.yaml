@@ -7,7 +7,11 @@ on:
 jobs:
   on-watch:
     name: Watching the watchers
-    uses: stairwaytowonderland/actions/.github/workflows/watchers.yaml@v1
-    secrets: inherit
-    # with:
-    #   create-issue: true
+    runs-on: ubuntu-latest
+    # if: ${{ github.repository == format('{0}/repository-template', github.repository_owner) }}
+    steps:
+      - name: Watchers Action
+        uses: stairwaytowonderland/actions/.github/actions/watchers@v1
+        with:
+          github-token: ${{ secrets.GH_PAT_REPO_WRITE }}
+          # create-issue: true
