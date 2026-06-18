@@ -78,47 +78,56 @@ _workflow_ to create some additional useful labels.
 >
 > Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly.
 
-### :b: _Option "B"_: Clone this repo
+### :b: _Option "B"_: Manual Creation
 
-```bash
-git clone git@github.com:stairwaytowonderland/repository-template.git
-```
+1. **Clone this repo:**
 
-#### Create a new repository from the command line
+    ```bash
+    git clone git@github.com:stairwaytowonderland/repository-template.git
+    ```
 
-```bash
-# Delete the .git folder from cloned project
-rm -rf .git
+1. **Create a new empty repo:**
 
-# Overwrite README with your content
-echo "# Repository Template" > README.md
+    Use the **_UI_** to [create a new repository](https://github.com/new).
 
-# Initialize new git local repository
-git init
+1. **Initialize from the command line:**
 
-# Set default branch
-git branch -M main
+    ```bash
+    # Change directory into the cloned template
+    cd /path/to/cloned/template
 
-# Make first commit empty to allow easier rebasing
-git commit --no-verify --allow-empty -m "chore: initial empty commit"
+    # Delete the .git folder from cloned template
+    rm -rf .git
 
-# Install pre-commit hooks
-# (make sure `pre-commit` is installed ... install it using `pip` or `brew`)
-pre-commit install
+    # Optionally overwrite the README with your content
+    echo "# Repository Template" > README.md
 
-# Add all files (make sure your .gitignore file is properly configured)
-git add .
+    # Initialize new git local repository
+    git init
 
-# Second commit
-git commit -m "chore: adding initial files"
+    # Set default branch
+    git branch -M main
 
-# Set remote ...
-# To update the url (instead of add), use `git remote set-url origin <GIT_URL>`
-git remote add origin git@github.com:<user-or-org>/<new-existing-repo>.git
+    # Make first commit empty to allow easier rebasing
+    git commit --no-verify --allow-empty -m "chore: initial empty commit"
 
-# Push to remote
-git push -u origin main
-```
+    # Install pre-commit hooks
+    # (make sure `pre-commit` is installed ... install it using `pip` or `brew`)
+    pre-commit install
+
+    # Add all files (make sure your .gitignore file is properly configured)
+    git add .
+
+    # Second commit
+    git commit -m "chore: adding initial files"
+
+    # Set the remote to the new repo you manually created (step 2) ...
+    # To update the url (instead of add), use `git remote set-url origin <GIT_URL>`
+    git remote add origin git@github.com:<user-or-org>/<new-empty-repo>.git
+
+    # Push to remote
+    git push -u origin main
+    ```
 
 ## :package: Releasing
 
