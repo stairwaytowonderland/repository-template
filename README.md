@@ -67,7 +67,7 @@ _workflow_ to create some additional useful labels.
 
 ## :rocket: Getting started
 
-### :a: _Option "A"_: Use this template
+### :a: _Option "A"_: Use this template _(recommended)_
 
 1. Click the **Use this template** button at the top of the repository
 1. Select **Create a new repository**
