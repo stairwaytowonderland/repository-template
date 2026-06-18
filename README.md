@@ -44,7 +44,7 @@ A minimal starting point for a basic repository. :ocean: :japanese_castle: :surf
 └── TODO.example.csv
 ```
 
-## :white_check_mark: Good first tasks
+## :white_check_mark: First tasks
 
 - [ ] **:one: Create your repo:** Use this template to create your own repo.
 - [ ] **:two: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
