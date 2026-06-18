@@ -214,10 +214,10 @@ files.
 
 ## :surfer: Essential tools
 
-- :white_check_mark: [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
-- :white_check_mark: [EditorConfig](https://editorconfig.org/)
-- :white_check_mark: [pre-commit](https://pre-commit.com/)
-- :white_check_mark: [Prettier](https://prettier.io/)
+- [x] :white_check_mark: [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
+- [x] :white_check_mark: [EditorConfig](https://editorconfig.org/)
+- [x] :white_check_mark: [pre-commit](https://pre-commit.com/)
+- [x] :white_check_mark: [Prettier](https://prettier.io/)
 
   > :memo: **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
   >
