@@ -182,7 +182,7 @@ file into your project.
 
 ### :fountain_pen: Contributing details
 
-For customized **contributing details**, create a `CONTRIBUTING.md` in this repo:
+For customized **contributing details**, create a **`CONTRIBUTING.md`** in this repo:
 
 ```bash
 echo "# Contributing Guidelines" > CONTRIBUTING.md
@@ -195,7 +195,7 @@ echo "# Contributing Guidelines" > CONTRIBUTING.md
 
 ### :lady_beetle: Issues and PRs
 
-For simplicity reasons, this template repo doesn't include the `ISSUE_TEMPLATE` and `PULL_REQUEST_TEMPLATE` _(.md)_
+For simplicity reasons, this template repo doesn't include the **`ISSUE_TEMPLATE`** and **`PULL_REQUEST_TEMPLATE`** _(.md)_
 files.
 
 > [!NOTE]
