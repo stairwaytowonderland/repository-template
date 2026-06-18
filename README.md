@@ -8,7 +8,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 
 A minimal starting point for a basic repository.
-:ocean: :japanese_castle: :surfer: :rocket: :flying_saucer: :ringed_planet: :milky_way: :alien:
+:ocean: :japanese_castle: :surfer: :rocket: :flying_saucer: :ringed_planet: :milky_way: :alien: :monkey:
 
 ## :cactus: Project structure
 
