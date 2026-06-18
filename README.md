@@ -44,6 +44,9 @@ A minimal starting point for a basic repository. :ocean: :japanese_castle: :surf
 └── TODO.example.csv
 ```
 
+<!-- REMOVE BELOW -->
+---
+
 ## :white_check_mark: First tasks
 
 - [ ] **:one: Create your repo:** Use this template to create your own repo.
@@ -61,8 +64,6 @@ _workflow_ to create some additional useful labels.
   > ```none
   > chore(deps): bump actions/checkout from 3 to X
   > ```
-
----
 
 ## :rocket: Getting started
 
@@ -224,6 +225,7 @@ files.
   > See the [official docs](https://prettier.io/docs/ignore) for details on ignoring code.
 
 ---
+<!-- REMOVE ABOVE -->
 
 ## :sparkles: Contributing
 
