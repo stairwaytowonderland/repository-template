@@ -66,7 +66,7 @@ _workflow_ to create some additional useful labels.
 
 ## :rocket: Getting started
 
-### :a: Option "A": Use this template
+### :a: _Option "A"_: Use this template
 
 1. Click the **Use this template** button at the top of the repository
 1. Select **Create a new repository**
@@ -78,7 +78,7 @@ _workflow_ to create some additional useful labels.
 >
 > Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly.
 
-### :b: Option "B": Clone this repo
+### :b: _Option "B"_: Clone this repo
 
 ```bash
 git clone git@github.com:stairwaytowonderland/repository-template.git
