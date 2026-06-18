@@ -7,7 +7,8 @@
 [![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-cc-FE5196?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?logo=pre-commit&logoColor=black)](https://github.com/pre-commit/pre-commit)
 
-A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :flying_saucer: :ringed_planet: :milky_way: :alien:
+A minimal starting point for a basic repository.
+:ocean: :japanese_castle: :surfer: :rocket: :flying_saucer: :ringed_planet: :milky_way: :alien:
 
 ## :cactus: Project structure
 
