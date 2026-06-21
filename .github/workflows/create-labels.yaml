@@ -1,5 +1,9 @@
 name: Create Labels
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 on:
   repository_dispatch:
     types: [create-labels]
@@ -17,10 +21,8 @@ on:
 jobs:
   create-labels:
     name: Create Labels
-    # if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     uses: stairwaytowonderland/label-management/.github/workflows/create-labels.yaml@v1
+    secrets: inherit
     with:
-      dry-run: ${{ inputs.dry-run || false }}
-      update-existing: ${{ inputs.update-existing || false }}
-    secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      dry-run: ${{ inputs.dry-run == true }}
+      update-existing: ${{ inputs.update-existing == true }}
