@@ -2,13 +2,18 @@ name: CI
 
 on:
   push:
-    # Fires when a tag matching v* is pushed with personal credentials.
-    tags: ['v*']
-    branches: [main]
+    # Trigger 1: When main branch is updated (respects path ignores)
+    branches:
+      - main
     paths-ignore:
       - 'CHANGELOG.md'
       - 'package.json'
       - 'package-lock.json'
+
+    # Trigger 2: When a version tag is pushed
+    tags:
+      - 'v*'
+
   workflow_dispatch:
     inputs:
       fail-on-no-release:
