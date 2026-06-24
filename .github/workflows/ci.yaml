@@ -50,6 +50,7 @@ jobs:
             echo "This is not the first commit."
             echo "is-first-commit=false" >> $GITHUB_OUTPUT
           fi
+
   release:
     name: Release
     if: startsWith(github.ref, 'refs/heads/main') && ! inputs.publish
