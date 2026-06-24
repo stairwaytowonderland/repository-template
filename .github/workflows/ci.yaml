@@ -37,7 +37,19 @@ jobs:
     if: github.event.before == '0000000000000000000000000000000000000000'
     runs-on: ubuntu-latest
     outputs:
-      is-first-commit: ${{ github.event.before == '0000000000000000000000000000000000000000' }}
+      is-first-commit: ${{ steps.check.outputs.is-first-commit }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check if this is the first commit
+        id: check
+        run: |
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "This is the first commit."
+            echo "is-first-commit=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is not the first commit."
+            echo "is-first-commit=false" >> $GITHUB_OUTPUT
+          fi
   release:
     name: Release
     if: startsWith(github.ref, 'refs/heads/main') && ! inputs.publish
