@@ -31,7 +31,7 @@ updates:
   #   ignore:
   #     - dependency-name: '*'
   #       update-types: ['version-update:semver-major']
-  #   labels: ['dependencies', 'deps:npm']
+  #   labels: ['dependencies', 'deps:javascript']
   #   groups:
   #     npm:
   #       applies-to: version-updates
