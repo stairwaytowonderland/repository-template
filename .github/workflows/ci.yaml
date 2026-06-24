@@ -32,9 +32,26 @@ concurrency:
 # 'Fine-grained token' repo permissions: Contents
 
 jobs:
+  check-if-first-commit:
+    name: Check if this is the first commit
+    if: github.event.before == '0000000000000000000000000000000000000000'
+    runs-on: ubuntu-latest
+    outputs:
+      is-first-commit: ${{ steps.check.outputs.is-first-commit }}
+    steps:
+      - uses: actions/checkout@v6
+      - id: check
+        run: |
+          if [ $(git rev-list --count HEAD) -eq 1 ]; then
+            echo "This is the first commit."
+            echo "is-first-commit=true" >> $GITHUB_OUTPUT
+          else
+            echo "This is not the first commit."
+            echo "is-first-commit=false" >> $GITHUB_OUTPUT
+          fi
   release:
     name: Release
-    # if: (startsWith(github.ref, 'refs/heads/main') && ! inputs.publish) && github.event.before != '0000000000000000000000000000000000000000'
+    if: startsWith(github.ref, 'refs/heads/main') && ! inputs.publish
     uses: ./.github/workflows/release.yaml
     secrets: inherit
     with:
@@ -43,7 +60,7 @@ jobs:
 
   publish:
     name: Publish
-    # if: (startsWith(github.ref, 'refs/tags/v') || inputs.publish) && github.event.before != '0000000000000000000000000000000000000000'
+    if: startsWith(github.ref, 'refs/tags/v') || inputs.publish
     uses: ./.github/workflows/publish.yaml
     secrets: inherit
     with:
