@@ -34,22 +34,7 @@ concurrency:
 jobs:
   check-if-first-commit:
     name: Check if this is the first commit
-    if: github.event.before == '0000000000000000000000000000000000000000'
-    runs-on: ubuntu-latest
-    outputs:
-      is-first-commit: ${{ steps.check.outputs.is-first-commit == 'true' }}
-    steps:
-      - uses: actions/checkout@v6
-      - name: Check if this is the first commit
-        id: check
-        run: |
-          if [ $(git rev-list --count HEAD) -eq 1 ]; then
-            echo "This is the first commit."
-            echo "is-first-commit=true" >> $GITHUB_OUTPUT
-          else
-            echo "This is not the first commit."
-            echo "is-first-commit=false" >> $GITHUB_OUTPUT
-          fi
+    uses: stairwaytowonderland/actions/.github/actions/first-commit-action@v1
 
   release:
     name: Release
