@@ -11,6 +11,8 @@ registries:
   github-public:
     type: git
     url: https://github.com/
+    username: x-access-token
+    password: ${{ secrets.GITHUB_TOKEN }}
 
   # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#npm-registry
   # npm-github:
