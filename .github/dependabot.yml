@@ -22,12 +22,14 @@ updates:
     commit-message:
       prefix: 'ci'
       include: 'scope' # Automatically appends "(deps)" -> ci(deps):
-    labels: ['dependencies', 'deps:github-actions']
+    # Consolidate all updates into a single pull request to reduce noise. This is especially useful for monorepos with many dependencies. Note that this will only consolidate updates for the same package ecosystem and directory.
+    # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
     groups:
       github-actions:
         applies-to: version-updates
         patterns:
           - '*'
+    labels: ['dependencies', 'deps:github-actions']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
     # assignees: ['andrewhaller']
@@ -39,10 +41,10 @@ updates:
   #   ignore:
   #     - dependency-name: '*'
   #       update-types: ['version-update:semver-major']
+  #   labels: ['dependencies', 'deps:javascript']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
-  #   labels: ['dependencies', 'deps:javascript']
   #   groups:
   #     npm:
   #       applies-to: version-updates
@@ -55,10 +57,10 @@ updates:
   #   schedule:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
+  #   labels: ['dependencies', 'deps:python']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
-  #   labels: ['dependencies', 'deps:python']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
   #   assignees: ['andrewhaller']
@@ -67,10 +69,10 @@ updates:
   #   schedule:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
+  #   labels: ['dependencies', 'deps:docker']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
-  #   labels: ['dependencies', 'deps:docker']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
   #   assignees: ['andrewhaller']
@@ -81,10 +83,10 @@ updates:
   #   schedule:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
+  #   labels: ['dependencies', 'deps:terraform']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
-  #   labels: ['dependencies', 'deps:terraform']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
   #   assignees: ['andrewhaller']
