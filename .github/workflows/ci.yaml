@@ -32,15 +32,23 @@ concurrency:
 # 'Fine-grained token' repo permissions: Contents
 
 jobs:
-  setup:
-    name: Setup
+  meta:
+    name: Meta
     runs-on: ubuntu-latest
     outputs:
       is-first-commit: ${{ steps.check-if-first-commit.outputs.is-first-commit == 'true' }}
+      repo-owner: ${{ steps.repo-info.outputs.repo-owner }}
+      repo-name: ${{ steps.repo-info.outputs.repo-name }}
     steps:
       - name: Check if this is the first commit
         id: check-if-first-commit
         uses: stairwaytowonderland/actions/.github/actions/first-commit-action@v1
+      - name: Get repo info
+        id: repo-info
+        uses: stairwaytowonderland/actions/.github/actions/repo-info-action@v1
+        # with:
+        #   owner: ${{ inputs.owner }}
+        #   repo: ${{ inputs.repo }}
 
   release:
     name: Release
