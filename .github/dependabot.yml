@@ -1,17 +1,34 @@
 # See https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file for details on configuring this file
 version: 2
-# registries:
-#   # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
-#   github:
-#     type: git
-#     url: https://github.com/
-#     username: x-access-token
-#     password: ${{ secrets.GH_PAT_DEPENDABOT }}
+registries:
+  # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
+  # github:
+  #   type: git
+  #   url: https://github.com/
+  #   username: x-access-token
+  #   password: ${{ secrets.GH_PAT_DEPENDABOT }}
+
+  # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#npm-registry
+  # npm-github:
+  #   type: npm-registry
+  #   url: https://npm.pkg.github.com
+  #   token: ${{ secrets.GH_PAT_DEPENDABOT }}
+  #   replaces-base: true
+
+  # For a registry type: npm-registry, Dependabot's strict schema requires either a token or a username/password combination.
+  # It throws a validation error if they are missing, even if the registry is public.
+  # See https://github.com/dependabot/dependabot-core/issues/10258
+  npm-public:
+    type: npm-registry
+    url: https://registry.npmjs.org # Forces Dependabot to use the public registry
+    token: ${{ secrets.GH_PUBLIC_DEPENDABOT_NPM_DUMMY }} # Required for schema validation (for type: npm-registry), but not actually used for public registries
+    replaces-base: true
 updates:
   # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/customizing-dependabot-security-prs
   - package-ecosystem: 'github-actions'
-    directories:
-      - '/'
+    directory: '/'
+    exclude-paths:
+      - '.github/workflows/*'
       - '.github/actions/**'
     schedule:
       # interval: "monthly"
@@ -21,6 +38,30 @@ updates:
       timezone: 'America/Chicago'
     commit-message:
       prefix: 'ci'
+      include: 'scope' # Automatically appends "(deps)" -> ci(deps):
+    # Consolidate all updates into a single pull request to reduce noise. This is especially useful for monorepos with many dependencies. Note that this will only consolidate updates for the same package ecosystem and directory.
+    # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - '*'
+    labels: ['dependencies', 'deps:github-actions']
+    open-pull-requests-limit: 5 # Limits active PRs to prevent noise
+    rebase-strategy: 'auto'
+    # assignees: ['andrewhaller']
+  - package-ecosystem: 'github-actions'
+    directories:
+      - '.github/workflows'
+      - '.github/actions/**'
+    schedule:
+      # interval: "monthly"
+      # day: "friday"
+      # internal: "daily" # Can be daily, weekly, or monthly
+      interval: 'weekly'
+      timezone: 'America/Chicago'
+    commit-message:
+      prefix: 'chore'
       include: 'scope' # Automatically appends "(deps)" -> ci(deps):
     # Consolidate all updates into a single pull request to reduce noise. This is especially useful for monorepos with many dependencies. Note that this will only consolidate updates for the same package ecosystem and directory.
     # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
@@ -43,8 +84,8 @@ updates:
   #       update-types: ['version-update:semver-major']
   #   labels: ['dependencies', 'deps:javascript']
   #   commit-message:
-  #     prefix: "chore"
-  #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
+  #     prefix: 'chore'
+  #     include: 'scope' # Automatically appends "(deps)" -> chore(deps):
   #   groups:
   #     npm:
   #       applies-to: version-updates
@@ -52,6 +93,8 @@ updates:
   #         - '*'
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
+  #   registries: ['npm-public']
+  #   assignees: ['andrewhaller']
   # - package-ecosystem: 'pip'
   #   directory: '/src/'
   #   schedule:
