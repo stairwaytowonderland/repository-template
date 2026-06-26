@@ -23,9 +23,14 @@ updates:
       prefix: 'ci'
       include: 'scope' # Automatically appends "(deps)" -> ci(deps):
     labels: ['dependencies', 'deps:github-actions']
-    assignees: ['andrewhaller']
+    groups:
+      github-actions:
+        applies-to: version-updates
+        patterns:
+          - '*'
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
+    # assignees: ['andrewhaller']
   # - package-ecosystem: 'npm'
   #   directory: '/'
   #   schedule:
@@ -54,9 +59,9 @@ updates:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
   #   labels: ['dependencies', 'deps:python']
-  #   assignees: ['andrewhaller']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
+  #   assignees: ['andrewhaller']
   # - package-ecosystem: 'docker'
   #   directory: '/docker/'
   #   schedule:
@@ -66,9 +71,9 @@ updates:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
   #   labels: ['dependencies', 'deps:docker']
-  #   assignees: ['andrewhaller']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
+  #   assignees: ['andrewhaller']
   # - package-ecosystem: 'terraform'
   #   directories:
   #     - '/terraform/'
@@ -80,6 +85,6 @@ updates:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
   #   labels: ['dependencies', 'deps:terraform']
-  #   assignees: ['andrewhaller']
   #   open-pull-requests-limit: 5
   #   rebase-strategy: 'auto'
+  #   assignees: ['andrewhaller']
