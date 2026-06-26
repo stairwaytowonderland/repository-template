@@ -46,9 +46,6 @@ jobs:
       - name: Get repo info
         id: repo-info
         uses: stairwaytowonderland/actions/.github/actions/repo-info-action@v1
-        # with:
-        #   owner: ${{ inputs.owner }}
-        #   repo: ${{ inputs.repo }}
 
   release:
     name: Release
