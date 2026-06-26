@@ -22,7 +22,7 @@
 						"release": "patch"
 					},
 					{
-						"type": "ci",
+						"type": "chore",
 						"scope": "deps",
 						"release": "patch"
 					},
