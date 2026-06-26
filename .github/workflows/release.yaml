@@ -20,7 +20,7 @@ on:
 jobs:
   release:
     name: Release
-    uses: stairwaytowonderland/actions/.github/workflows/release.yaml@v1
+    uses: stairwaytowonderland/actions/.github/workflows/release-debug.yaml@v1
     secrets: inherit
     with:
       dispatch-workflow: ${{ inputs.dispatch-workflow }}
