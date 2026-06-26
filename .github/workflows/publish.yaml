@@ -10,7 +10,6 @@ on:
       notes-b64:
         description: 'Base64-encoded release notes (Markdown)'
         type: string
-        required: false
 
 jobs:
   publish:
