@@ -47,7 +47,7 @@ updates:
   #   # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
   #   groups:
   #     github-actions:
-  #       applies-to: version-updates
+  #       # applies-to: version-updates
   #       patterns:
   #         - '*'
   #   labels: ['dependencies', 'deps:github-actions']
@@ -72,7 +72,6 @@ updates:
     # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
     groups:
       github-actions:
-        applies-to: version-updates
         patterns:
           - '*'
     labels: ['dependencies', 'deps:github-actions']
