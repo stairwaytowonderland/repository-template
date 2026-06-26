@@ -1,7 +1,7 @@
 # See https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file for details on configuring this file
 version: 2
 registries:
-  # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
+  # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
   # github:
   #   type: git
   #   url: https://github.com/
@@ -14,7 +14,7 @@ registries:
     username: x-access-token
     password: ${{ secrets.GITHUB_TOKEN }}
 
-  # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#npm-registry
+  # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#npm-registry
   # npm-github:
   #   type: npm-registry
   #   url: https://npm.pkg.github.com
@@ -24,11 +24,11 @@ registries:
   # For a registry type: npm-registry, Dependabot's strict schema requires either a token or a username/password combination.
   # It throws a validation error if they are missing, even if the registry is public.
   # See https://github.com/dependabot/dependabot-core/issues/10258
-  npm-public:
-    type: npm-registry
-    url: https://registry.npmjs.org # Forces Dependabot to use the public registry
-    token: ${{ secrets.GH_PUBLIC_DEPENDABOT_NPM_DUMMY }} # Required for schema validation (for type: npm-registry), but not actually used for public registries
-    replaces-base: true
+  # npm-public:
+  #   type: npm-registry
+  #   url: https://registry.npmjs.org # Forces Dependabot to use the public registry
+  #   token: ${{ secrets.GH_PUBLIC_DEPENDABOT_NPM_DUMMY }} # Required for schema validation (for type: npm-registry), but not actually used for public registries
+  #   replaces-base: true
 updates:
   # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/customizing-dependabot-security-prs
   - package-ecosystem: 'github-actions'
