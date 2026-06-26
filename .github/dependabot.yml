@@ -1,12 +1,16 @@
 # See https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file for details on configuring this file
 version: 2
 registries:
-  # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
-  github:
+  # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#git
+  # github:
+  #   type: git
+  #   url: https://github.com/
+  #   username: x-access-token
+  #   password: ${{ secrets.GH_PAT_DEPENDABOT }}
+
+  github-public:
     type: git
     url: https://github.com/
-    username: x-access-token
-    password: ${{ secrets.GH_PAT_DEPENDABOT }}
 
   # # https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configure-access-to-private-registries#npm-registry
   # npm-github:
@@ -49,7 +53,8 @@ updates:
     labels: ['dependencies', 'deps:github-actions']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
-    assignees: ['andrewhaller']
+    registries: ['github-public']
+    # assignees: ['andrewhaller']
   - package-ecosystem: 'github-actions'
     directories:
       - '.github/workflows'
@@ -73,6 +78,7 @@ updates:
     labels: ['dependencies', 'deps:github-actions']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
+    registries: ['github-public']
     # assignees: ['andrewhaller']
   # - package-ecosystem: 'npm'
   #   directory: '/'
