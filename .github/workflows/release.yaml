@@ -21,7 +21,8 @@ jobs:
   release:
     name: Release
     uses: stairwaytowonderland/actions/.github/workflows/release.yaml@v1
-    secrets: inherit
+    secrets:
+      github-token: ${{ secrets.GH_PAT_REPO_WRITE }}
     with:
       dispatch-workflow: ${{ inputs.dispatch-workflow }}
       fail-on-no-release: ${{ inputs.fail-on-no-release }}
