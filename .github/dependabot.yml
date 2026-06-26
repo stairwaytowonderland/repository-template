@@ -49,7 +49,7 @@ updates:
     labels: ['dependencies', 'deps:github-actions']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
-    # assignees: ['andrewhaller']
+    assignees: ['andrewhaller']
   - package-ecosystem: 'github-actions'
     directories:
       - '.github/workflows'
