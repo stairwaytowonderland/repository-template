@@ -77,7 +77,10 @@ _workflow_ to create some additional useful labels.
 
 > [!IMPORTANT]
 >
-> Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly.
+> Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly!
+>
+> Make sure to remove or update the [`CODEOWNERS`](./.github/CODEOWNERS) file! For details on how to use this file,
+> see [About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
 ### :b: _Option "B"_: Manual Creation
 
