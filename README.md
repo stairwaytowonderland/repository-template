@@ -133,11 +133,11 @@ _workflow_ to create some additional useful labels.
     git push -u origin main
     ```
 
-## :package: Releasing
+## :package: Publishing a New Release
 
 This template uses **`semantic-release`** with the _conventionalcommits_ preset by default.
 
-### :label: Tags/Releases
+### :label: Creating Tags and Releases
 
 **The creation of tags and releases is handled _automatically_ by the pre-configured [_workflows_](./.github/workflows/).**
 
@@ -232,7 +232,7 @@ files.
 
 ## :sparkles: Contributing
 
-### :robot: Commit Message Guidelines
+### :speech_balloon: Commit Message Guidelines
 
 - Write clear, concise commit messages that follow the
   [![conventional-commit](https://img.shields.io/badge/conventional--commit-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)&nbsp;standard.
