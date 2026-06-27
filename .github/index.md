@@ -2,9 +2,7 @@
 
 ## :cactus: File Structure
 
-> [!NOTE]
->
-> `tree -a -F -L 3 -I --gitignore --dirsfirst .`
+> :seedling: `tree -a -F -L 3 -I --gitignore --dirsfirst .`
 
 ```none
 .github/
