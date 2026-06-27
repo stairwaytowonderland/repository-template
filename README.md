@@ -80,9 +80,9 @@ follow the below instructions:
 
 > [!IMPORTANT]
 >
-> :classical_building: Make sure to remove or update the [`CODEOWNERS`](./CODEOWNERS) file! For
+> :classical_building: Make sure to remove or update the [`CODEOWNERS`](./CODEOWNERS) file!<br>_(For
 > details on how to use this file, see
-> [About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+> [About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).)_
 >
 > :books: Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly!
 </details>
