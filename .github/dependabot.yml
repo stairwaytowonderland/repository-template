@@ -50,7 +50,7 @@ updates:
   #       # applies-to: version-updates
   #       patterns:
   #         - '*'
-  #   labels: ['dependencies', 'deps:github-actions']
+  #   labels: ['dependencies', 'github_actions']
   #   open-pull-requests-limit: 5 # Limits active PRs to prevent noise
   #   rebase-strategy: 'auto'
   #   # assignees: ['andrewhaller']
@@ -74,7 +74,7 @@ updates:
       github-actions:
         patterns:
           - '*'
-    # labels: ['dependencies', 'deps:github-actions']
+    # labels: ['dependencies', 'github_actions']
     open-pull-requests-limit: 5 # Limits active PRs to prevent noise
     rebase-strategy: 'auto'
     # assignees: ['andrewhaller']
@@ -87,7 +87,7 @@ updates:
   #   ignore:
   #     - dependency-name: '*'
   #       update-types: ['version-update:semver-major']
-  #   labels: ['dependencies', 'deps:javascript']
+  #   labels: ['dependencies', 'javascript']
   #   commit-message:
   #     prefix: 'chore'
   #     include: 'scope' # Automatically appends "(deps)" -> chore(deps):
@@ -106,7 +106,7 @@ updates:
   #   schedule:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
-  #   labels: ['dependencies', 'deps:python']
+  #   labels: ['dependencies', 'python']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
@@ -119,7 +119,7 @@ updates:
   #   schedule:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
-  #   labels: ['dependencies', 'deps:docker']
+  #   labels: ['dependencies', 'docker']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
@@ -134,7 +134,7 @@ updates:
   #   schedule:
   #     interval: 'weekly'
   #     timezone: 'America/Chicago'
-  #   labels: ['dependencies', 'deps:terraform']
+  #   labels: ['dependencies', 'terraform']
   #   commit-message:
   #     prefix: "chore"
   #     include: "scope" # Automatically appends "(deps)" -> chore(deps):
