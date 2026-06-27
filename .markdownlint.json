@@ -9,7 +9,8 @@
 	},
 	"MD028": false,
 	"MD033": {
-		"allowed_elements": ["ins", "div", "span", "br"]
+		"allowed_elements": ["ins", "div", "span", "br", "details", "summary", "b", "i"]
 	},
-	"MD036": false
+	"MD036": false,
+	"MD041": false
 }
