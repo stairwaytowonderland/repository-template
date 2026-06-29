@@ -146,7 +146,7 @@ This template uses **`semantic-release`** with the _conventionalcommits_ preset 
 
 ### :label: Creating Tags and Releases
 
-**The creation of tags and releases is handled _automatically_ by the pre-configured [_workflows_](./.github/workflows/).**
+The **creation of tags and releases is handled _automatically_** by the pre-configured [_workflows_](./.github/workflows/).
 
 _Default [`package.json`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/package.json)
 and [`.releaserc`](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)
