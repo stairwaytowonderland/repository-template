@@ -44,7 +44,7 @@ A minimal starting point for a basic repository. :ocean: :japanese_castle: :surf
 
 ### :white_check_mark: First tasks
 
-- [ ] **:one: :tada: Create your repo:** Use this template to [**create your own repo**](#honeybee-create-your-own-repository)!
+- [ ] **:one: :tada: Create your repo:** Use this template to [**Create your own repo**](#honeybee-create-your-own-repository)!
 - [ ] **:two: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
 _workflow_ to create some additional useful labels.
 - [ ] **:three: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
