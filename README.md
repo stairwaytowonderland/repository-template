@@ -83,7 +83,6 @@ follow the below instructions:
 > [About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).)_
 >
 > :books: Make sure to  update the [`README.md`](./README.md) and the [`LICENSE`](./LICENSE) files accordingly!
-</details>
 
 #### :b: _Option "B"_
 
