@@ -16,7 +16,7 @@ A minimal starting point for a basic repository. :ocean: :japanese_castle: :surf
 > See the [`.github` folder's _"Readme"_](./.github/index.md) _(`index.md`)_ for its file structure.
 
 <details>
-<summary><i><b>Project file structure</b> (click to expand) ...</i></summary><br>
+<summary><b>Project file structure</b> <i>(click to expand) ...</i></summary><br>
 
 > :seedling: `tree -a -F -L 1 -I '.git|.vscode' --gitignore --dirsfirst .`
 
@@ -87,7 +87,7 @@ follow the below instructions:
 #### :b: _Option "B"_
 
 <details>
-<summary><b>Manual Creation</b></summary>
+<summary><b>Manual Creation</b> <i>(Click to expand) ...</i></summary>
 
 1. **Clone this repo:**
 
