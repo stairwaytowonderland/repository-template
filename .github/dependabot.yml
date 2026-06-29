@@ -66,8 +66,8 @@ updates:
       interval: 'weekly'
       timezone: 'America/Chicago'
     commit-message:
-      prefix: 'ci'
-      include: 'scope' # Automatically appends "(deps)" -> ci(deps):
+      prefix: 'chore'
+      include: 'scope' # Automatically appends "(deps)" -> chore(deps):
     # Consolidate all updates into a single pull request to reduce noise. This is especially useful for monorepos with many dependencies. Note that this will only consolidate updates for the same package ecosystem and directory.
     # https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#groups--
     groups:
