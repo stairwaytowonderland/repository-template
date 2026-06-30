@@ -44,7 +44,7 @@ A minimal starting point for a basic repository. :ocean: :japanese_castle: :surf
 
 ### :white_check_mark: First tasks
 
-- [ ] **:one: :tada: Create your repo:** Use this template to [**Create your own repo**](#honeybee-create-your-own-repository)!
+- [ ] **:one: :tada: Create your repo:** Use this template to [**Create your own project**](#honeybee-create-your-own-project)!
 - [ ] **:two: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
 _workflow_ to create some additional useful labels.
 - [ ] **:three: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
@@ -61,9 +61,9 @@ _workflow_ to create some additional useful labels.
   > chore(deps): bump actions/checkout from 3 to X
   > ```
 
-### :honeybee: Create Your Own Repository
+### :honeybee: Create Your Own Project
 
-To create your own repository, you can use this repository as a template! Just
+To create your own project, you can use this repository as a template! Just
 follow the below instructions:
 
 #### :a: _Option "A"_
