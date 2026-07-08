@@ -1,4 +1,4 @@
-name: Create Labels
+name: 🏷️ Create Labels
 
 on:
   repository_dispatch:

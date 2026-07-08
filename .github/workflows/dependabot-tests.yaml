@@ -1,4 +1,4 @@
-name: Dependabot Tests
+name: 🎫 Dependabot Tests
 
 on:
   workflow_run:

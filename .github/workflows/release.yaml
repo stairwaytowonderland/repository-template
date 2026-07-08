@@ -1,4 +1,4 @@
-name: Release a Version
+name: 📦 Release a Version
 
 on:
   workflow_call:
