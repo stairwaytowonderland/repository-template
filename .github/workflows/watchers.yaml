@@ -1,5 +1,8 @@
 name: Watchers
 
+permissions:
+  contents: read
+
 on:
   watch:
     types: [started]

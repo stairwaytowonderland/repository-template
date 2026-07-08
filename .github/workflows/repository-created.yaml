@@ -1,5 +1,8 @@
 name: _
 
+permissions:
+  contents: read
+
 on:
   repository_dispatch:
     types: [repository-created]

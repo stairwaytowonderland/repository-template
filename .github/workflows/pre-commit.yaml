@@ -12,6 +12,10 @@ on:
         type: string
         default: '.pre-commit-config.yaml'
 
+permissions:
+  contents: read
+  pull-requests: read
+
 jobs:
   pre-commit:
     name: Run pre-commit

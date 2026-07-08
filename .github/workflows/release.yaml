@@ -13,6 +13,12 @@ on:
         description: 'The git ref or sha to release (e.g. refs/heads/main). Defaults to the current ref.'
         type: string
 
+permissions:
+  actions: write
+  contents: write
+  issues: write
+  pull-requests: write
+
 jobs:
   release:
     name: Release
