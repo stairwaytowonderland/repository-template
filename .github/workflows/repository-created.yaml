@@ -16,4 +16,4 @@ jobs:
       url: ${{ github.event.client_payload.repository.url }}
       sender: ${{ github.event.client_payload.sender.login }}
       sender-id: ${{ github.event.client_payload.sender.id }}
-      first-commit-only: true
+      commit-count-to-check: 2
