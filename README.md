@@ -9,8 +9,7 @@
 
 ## :pushpin: Overview
 
-A minimal starting point for a basic repository. :ocean: :japanese_castle: :surfer: :rocket: :flying_saucer: :ringed_planet:
-:milky_way: :alien: :monkey: :tada:
+A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :earth_americas: :tada:
 
 ## :cactus: Project structure
 
@@ -46,7 +45,7 @@ A minimal starting point for a basic repository. :ocean: :japanese_castle: :surf
 
 ### :white_check_mark: First tasks
 
-- [ ] **:one: :boom: Create your repo:** Use this template to [**Create your own project**](#clipboard-create-your-own-project)!
+- [ ] **:one: :clipboard: Create your repo:** Use this template to [**Create your own project**](#clipboard-create-your-own-project)!
 - [ ] **:two: :label: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
 _workflow_ to create some additional useful labels.
 - [ ] **:three: :bookmark: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
@@ -162,7 +161,9 @@ additional customizations, such as [including a `CHANGELOG`](#page_with_curl-inc
 
 ### :page_with_curl: Including a `CHANGELOG`
 
-To have the generated `CHANGELOG` automatically committed:
+<details>
+<summary><b>To have the generated <code>CHANGELOG</code> automatically, do the following</b>
+<i>(Expand for details) ...</i></summary>
 
 1. Copy the _default [.releaserc](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)_
 file into your project.
@@ -201,6 +202,8 @@ file into your project.
 > :1234: The `@semantic-release/changelog` plugin is typically one of the first in the _`plugins` array_, **after** `semantic-release-export-data`
 > but **before** `@semantic-release/commit-analyzer`.
 
+</details>
+
 ## :paintbrush: Further customizations
 
 ### :fountain_pen: Contributing details
@@ -228,10 +231,10 @@ files.
 
 ## :ocean: Essential tools
 
-- [x] :white_check_mark: [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
-- [x] :white_check_mark: [EditorConfig](https://editorconfig.org/)
-- [x] :white_check_mark: [pre-commit](https://pre-commit.com/)
-- [x] :white_check_mark: [Prettier](https://prettier.io/)
+- :white_check_mark: [Visual Studio Code](https://code.visualstudio.com/) (a.k.a. _VS Code_)
+- :white_check_mark: [EditorConfig](https://editorconfig.org/)
+- :white_check_mark: [pre-commit](https://pre-commit.com/)
+- :white_check_mark: [Prettier](https://prettier.io/)
 
   > :memo: **Note:** For a more customized experience, some files might need to be excluded from _Prettier_.
   >
