@@ -162,7 +162,7 @@ additional customizations, such as [including a `CHANGELOG`](#page_with_curl-inc
 ### :page_with_curl: Including a `CHANGELOG`
 
 <details>
-<summary><b>To have the generated <code>CHANGELOG</code> automatically, do the following</b>
+<summary><b>To have the generated <code>CHANGELOG</code> committed automatically, do the following</b>
 <i>(Expand for details) ...</i></summary>
 
 1. Copy the _default [.releaserc](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)_
