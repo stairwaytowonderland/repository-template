@@ -62,8 +62,9 @@ _workflow_ to create some additional useful labels.
 - [ ] **:five: :wrench: Customize your _project_:**
   Customize the `README.md`, `CODEOWNERS`, `LICENSE`, and any other docs or config _files_, to include project-specific
   information and instructions.
-- [ ] **:six: :trophy: _(BONUS)_ :art: Install `pre-commit` locally:** Install `pre-commit` locally and configure it
-(using [.pre-commit-config.yaml](./.pre-commit-config.yaml)) to ensure proper formatting, mitigating workflow failures.
+- [ ] **:six: :trophy: _(BONUS)_ :vertical_traffic_light: Install `pre-commit` locally:** Install `pre-commit` locally
+and configure it (using [.pre-commit-config.yaml](./.pre-commit-config.yaml)) to ensure proper formatting, mitigating
+workflow failures.
 _(See [Development Guidelines](https://github.com/stairwaytowonderland/repository-template?tab=contributing-ov-file#development-guidelines) for details)_
 
 ### :clipboard: Create Your Own Project
