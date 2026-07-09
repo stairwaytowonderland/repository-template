@@ -2,7 +2,7 @@
 
 ## :cactus: File Structure
 
-> :seedling: `tree -a -F -L 3 -I --gitignore --dirsfirst .`
+> :seedling: `tree -a -F -L 3 -I --gitignore --dirsfirst .github`
 
 ```none
 .github/
@@ -16,11 +16,11 @@
 │   ├── publish.yaml
 │   ├── release.yaml
 │   ├── repository-created.yaml
-│   ├── watchers.yaml
+│   ├── stargazers.yaml
 │   └── watchers.yaml.bak
 ├── CODEOWNERS
 ├── dependabot.yml
-└── README.md
+└── index.md
 ```
 
 > [!TIP]
