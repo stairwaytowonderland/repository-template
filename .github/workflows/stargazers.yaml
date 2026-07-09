@@ -9,6 +9,6 @@ on:
 
 jobs:
   stargazers:
-    name: Gazing the gazers
+    name: 🌟 Gazing the gazers
     uses: stairwaytowonderland/actions/.github/workflows/stargazers.yaml@v1
     secrets: inherit
