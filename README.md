@@ -38,8 +38,8 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :eart
 
 </details>
 
-<!-- REMOVE BELOW -->
 ---
+<!-- REMOVE BELOW -->
 
 ## :rocket: Getting started
 
