@@ -14,7 +14,8 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :eart
 ## :cactus: Project structure
 
 > [!TIP]
-> See the `.github` folder's _"Readme"_ ([`index.md`](./.github/index.md)) for its file structure.
+>
+> For the `.github` folder file structure, see its [`index.md`](./.github/index.md).
 
 <details>
 <summary><b>Project file structure</b> <i>(click to expand) ...</i></summary><br>
