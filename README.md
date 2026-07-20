@@ -51,8 +51,8 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :eart
 
 ### :white_check_mark: First tasks
 
-- [ ] **:one: :clipboard: Create your repo:** Use this template to [**Create your own project**](#clipboard-create-your-own-project)!
-:tada:
+- [ ] **:one: :clipboard: Create your repo:** Use this template to
+[**Create your own project**](#clipboard-create-your-own-project)! :tada:
 - [ ] **:two: :label: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
 _workflow_ to create some additional useful labels.
 - [ ] **:three: :bookmark: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
