@@ -15,7 +15,7 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :eart
 
 > [!TIP]
 >
-> For the `.github` folder file structure, see its [`index.md`](./.github/index.md).
+> For the complete `.github` folder file structure, see its [`index.md`](./.github/index.md).
 
 <details>
 <summary><b>Project file structure</b> <i>(click to expand) ...</i></summary><br>
