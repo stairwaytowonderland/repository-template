@@ -19,11 +19,17 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :eart
 <details>
 <summary><b>Project file structure</b> <i>(click to expand) ...</i></summary><br>
 
-> :seedling: `tree -a -F -L 1 -I '.git|.vscode' --gitignore --dirsfirst .`
+> :seedling: `tree -a -F -L 2 -I '.git|.vscode' --gitignore --dirsfirst .`
 
 ```none
 ./
 ├── .github/
+│   ├── workflows/
+│   ├── CODEOWNERS
+│   ├── dependabot.yml
+│   └── index.md
+├── script/
+│   └── release*
 ├── .editorconfig
 ├── .gitignore
 ├── .markdownlint.json
@@ -46,6 +52,7 @@ A minimal starting point for a basic repository. :ocean: :surfer: :rocket: :eart
 ### :white_check_mark: First tasks
 
 - [ ] **:one: :clipboard: Create your repo:** Use this template to [**Create your own project**](#clipboard-create-your-own-project)!
+:tada:
 - [ ] **:two: :label: Create some labels:** Run the [Create Labels](https://github.com/stairwaytowonderland/repository-template/actions/workflows/create-labels.yaml)
 _workflow_ to create some additional useful labels.
 - [ ] **:three: :bookmark: Create some issues:** Run the [Import Issues from CSV](https://github.com/stairwaytowonderland/repository-template/actions/workflows/import-csv-issues.yaml)
@@ -167,12 +174,13 @@ additional customizations, such as [including a `CHANGELOG`](#page_with_curl-inc
 ### :page_with_curl: Including a `CHANGELOG`
 
 <details>
-<summary><b>To have the generated <code>CHANGELOG</code> committed automatically, do the following</b>
+<summary><b>To have the generated <code>CHANGELOG</code> committed automatically </b>
 <i>(Expand for details) ...</i></summary>
 
 1. Copy the _default [.releaserc](https://github.com/stairwaytowonderland/node-semantic-release/blob/main/templates/releaserc.json)_
 file into your project.
-2. Add the `@semantic-release/git` _plugin_ configuration **to the end of the _plugins_ section** in your [`.releaserc`](./.releaserc):
+2. Add the `@semantic-release/git` _plugin_ configuration **to the end of the _plugins_ section** (**just before
+`semantic-release-export-data`**) in your [`.releaserc`](./.releaserc):
 
     ```json
     [
@@ -184,28 +192,79 @@ file into your project.
     ]
     ```
 
-> [!NOTE]
->
-> If using an altered or different `.releaserc` file, you must also ensure the `@semantic-release/changelog` _plugin_ is
-> configured:
->
-> ```json
-> [
->   "@semantic-release/changelog",
->   {
->     "changelogFile": "CHANGELOG.md"
->   }
-> ]
-> ```
+    > :memo: **Note:**
+    > If using an altered or different `.releaserc` file, you must also **ensure the `@semantic-release/changelog`
+    > _plugin_ is configured (before the `git` _plugin_**;
+    > see [**_"RC"_ Plugin ordering**](#electric_plug-rc-plugin-ordering) for more information):
+    >
+    > ```json
+    > [
+    >   "@semantic-release/changelog",
+    >   {
+    >     "changelogFile": "CHANGELOG.md"
+    >   }
+    > ]
+    > ```
 
 ### :electric_plug: _"RC"_ Plugin ordering
 
-> [!IMPORTANT]
->
-> :abcd: The **order of plugins DOES matter** in the _release configuration file (`.releaserc`)_!
->
-> :1234: The `@semantic-release/changelog` plugin is typically one of the first in the _`plugins` array_, **after** `semantic-release-export-data`
-> but **before** `@semantic-release/commit-analyzer`.
+The **order of _plugins_ DOES matter** in the _release configuration file (`.releaserc`)_!
+
+:1234: The recommended order for the _`plugins` array_ is:
+
+```json
+[
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/git",
+    "@semantic-release/github",
+    "semantic-release-export-data"
+]
+```
+
+#### Why This Exact Order Matters
+
+- [@semantic-release/commit-analyzer](https://github.com/semantic-release/commit-analyzer): Must go first to scan your
+commits and determine the next semantic version bump
+(_major_, _minor_, or _patch_).
+- [@semantic-release/release-notes-generator](https://github.com/semantic-release/release-notes-generator): Compiles
+the release notes based on those commits.
+- [@semantic-release/changelog](https://github.com/semantic-release/changelog): Must be placed before the `git` and `npm`
+plugins. It creates or updates the physical `CHANGELOG.md` file so downstream plugins can package and commit it.
+- [@semantic-release/npm](https://github.com/semantic-release/npm): Must run before the Git plugin. It updates the
+version string in package.json. If placed after `git`, the version bump won't be committed to your repository.
+- [@semantic-release/git](https://github.com/semantic-release/git): Consolidates the modified CHANGELOG.md and
+package.json, then creates the release commit and pushes it back to your repository.
+- [@semantic-release/github](https://github.com/semantic-release/github)
+(or [`gitlab`](https://github.com/semantic-release/gitlab)): Placed last to finalize the process by publishing the
+GitHub Release, uploading build assets, and posting automated comments on resolved issues or PRs.
+- [semantic-release-export-data](https://github.com/felipecrs/semantic-release-export-data): Can be placed anywhere in
+your plugins array, but the most reliable approach is to add it at the very end of your plugin list.
+It does not modify code, commit files, or change your package repository. _It is a passive plugin designed solely to
+hook into the prepare, publish, and success [lifecycles](https://semantic-release.org/developer-guide/plugin/) to extract data generated by previous steps (like the version
+determined by the `commit-analyzer`) and write it out as environment/GitHub Actions variables._
+
+See the [**official docs**](https://semantic-release.org/developer-guide/plugin/) for more information.
+
+#### How the Steps Execute Internally
+
+```mermaid
+flowchart TD
+    A[verifyConditions] --> B[analyzeCommits]
+    B --> C[verifyRelease]
+    C --> D[generateNotes]
+    D --> E[prepare]
+    E --> F[publish]
+    F --> G[success / fail]
+
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef successFill fill:#d4edda,stroke:#28a745,stroke-width:2px;
+    classDef failFill fill:#f8d7da,stroke:#dc3545,stroke-width:2px;
+
+    class G successFill;
+```
 
 </details>
 
