@@ -97,12 +97,13 @@
 	},
 	// https://github.com/yzhang-gh/vscode-markdown?tab=readme-ov-file#supported-settings
 	"markdown.extension.orderedList.marker": "one",
-	"markdown.extension.toc.unorderedList.marker": "-"
+	"markdown.extension.toc.unorderedList.marker": "-",
+	"markdown.extension.list.indentationSize": "adaptive",
 
 	/*
 		Shellcheck settings
 	*/
-	// "shellcheck.customArgs": ["-x"]
+	"shellcheck.customArgs": ["-x"]
 
 	/*
 		Dockerfile settings
@@ -110,6 +111,14 @@
 	// "[dockerfile]": {
 	// 	"editor.defaultFormatter": "ms-azuretools.vscode-containers",
 	// 	"editor.formatOnSave": false
+	// },
+
+	/*
+		Shellscript settings
+	*/
+	// "[shellscript]": {
+	// 	"editor.defaultFormatter": "mkhl.shfmt",
+	// 	"editor.formatOnSave": true
 	// },
 
 	/*
@@ -155,60 +164,4 @@
 	// 		"source.organizeImports": "explicit"
 	// 	}
 	// }
-
-	/*
-		Better Byte settings
-		https://marketplace.visualstudio.com/items?itemName=cloudbyte.better-byte
-	*/
-	// "better-byte.multilineComments": true,
-	// "better-byte.highlightPlainText": false,
-	// "better-byte.tags": [
-	// 	{
-	// 		"tag": "!",
-	// 		"color": "#FF2D00",
-	// 		"strikethrough": false,
-	// 		"underline": false,
-	// 		"backgroundColor": "transparent",
-	// 		"bold": false,
-	// 		"italic": false
-	// 	},
-	// 	{
-	// 		"tag": "?",
-	// 		"color": "#3498DB"
-	// 	},
-	// 	{
-	// 		"tag": "//",
-	// 		"color": "#474747",
-	// 		"strikethrough": true
-	// 	},
-	// 	{
-	// 		"tag": "TODO",
-	// 		"color": "#000000",
-	// 		"backgroundColor": "#FF8C00"
-	// 	},
-	// 	{
-	// 		"tag": "*",
-	// 		"color": "#28FF00"
-	// 	},
-	// 	{
-	// 		"tag": "FIXME",
-	// 		"color": "#000000",
-	// 		"backgroundColor": "#FFCC00"
-	// 	},
-	// 	{
-	// 		"tag": "HACK",
-	// 		"color": "#000000",
-	// 		"backgroundColor": "#FF8C00"
-	// 	},
-	// 	{
-	// 		"tag": "BUG",
-	// 		"color": "#000000",
-	// 		"backgroundColor": "#FF2D00"
-	// 	},
-	// 	{
-	// 		"tag": "UNDO",
-	// 		"color": "#000000",
-	// 		"backgroundColor": "#3498DB"
-	// 	}
-	// ]
 }

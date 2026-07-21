@@ -1,13 +1,9 @@
 {
 	"recommendations": [
-		"AmazonWebServices.aws-toolkit-vscode",
-		"aws-scripting-guy.cform",
+		// "AmazonWebServices.aws-toolkit-vscode",
+		// "aws-scripting-guy.cform",
 		"bierner.github-markdown-preview",
-		"bierner.markdown-checkbox",
-		"bierner.markdown-emoji",
-		"bierner.markdown-footnotes",
 		"bierner.markdown-mermaid",
-		"bierner.markdown-preview-github-styles",
 		"bierner.markdown-yaml-preamble",
 		"bpruitt-goddard.mermaid-markdown-syntax-highlighting",
 		"cloudbyte.better-byte",
@@ -24,7 +20,7 @@
 		"mechatroner.rainbow-csv",
 		"mhutchie.git-graph",
 		"mikoz.autoflake-extension",
-		"mkhl.shfmt", // Requires shfmt installation
+		// "mkhl.shfmt", // Requires shfmt installation
 		"ms-azuretools.vscode-containers",
 		"ms-azuretools.vscode-docker",
 		"ms-python.black-formatter",
