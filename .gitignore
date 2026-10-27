@@ -70,6 +70,11 @@ venv.bak/
 
 # --------------------------------
 
+# IDE files
+.idea
+*.code-workspace
+!project.code-workspace
+
 # Project-specific ignores
 *.bak
 *.old
@@ -81,3 +86,8 @@ venv.bak/
 logs
 *.log
 out/
+
+/script/*
+!/script/release
+!/script/*.sh
+!/script/*.example

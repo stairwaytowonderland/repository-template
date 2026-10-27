@@ -4,6 +4,7 @@ on:
   repository_dispatch:
     types: [create-issues]
 
+  # checkov:skip=CKV_GHA_7: Inputs are required for manual targeting
   workflow_dispatch:
     inputs:
       dry-run:
@@ -16,20 +17,21 @@ on:
         type: string
         default: 'TODO.csv'
 
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: false
-
 permissions:
   contents: read
-  issues: write
 
 jobs:
   import-issues:
     name: Import Issues
+    concurrency:
+      group: ${{ github.repository_id }}-${{ github.ref }}
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      issues: write
     uses: stairwaytowonderland/issue-management/.github/workflows/import-csv-issues.yaml@v1
-    secrets: inherit
     with:
       batch: true
       csv-path: ${{ inputs.csv-path || 'TODO.csv' }}
       dry-run: ${{ inputs.dry-run == true }}
+    secrets: inherit

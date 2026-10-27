@@ -1,63 +1,108 @@
-name: 🔄 CI
+# Use PAT instead of GITHUB_TOKEN to cause semantic-release to trigger tag pipeline when tag is created.
+# 'Fine-grained token' repo permissions: Contents
 
+# 1. Identity
+name: 🔄 CI
+# run-name: CI on ${{ github.ref_name }} triggered by @${{ github.actor }}
+
+# 2. Trigger Events
 on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'CHANGELOG.md'
-      - 'package.json'
-      - 'package-lock.json'
 
     tags:
       - 'v*'
 
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag to publish (e.g. v1.2.3)'
+        type: string
+        default: '' # checkov:skip=CKV_GHA_7: Tag required for automated dispatch, which is used for the first tag/release
+      notes-b64:
+        description: 'Base64-encoded release notes (Markdown)'
+        type: string
+        default: '' # checkov:skip=CKV_GHA_7: Release notes required for automated dispatch, which is used for the first tag/release
+
+# 3. Global Security & Concurrency
+permissions:
+  contents: read
 
 concurrency:
   group: '${{ github.repository_id }}-${{ github.ref_name }}'
   cancel-in-progress: ${{ github.event_name == 'push' }}
 
-# Use PAT instead of GITHUB_TOKEN to cause semantic-release to trigger tag pipeline when tag is created.
-# 'Fine-grained token' repo permissions: Contents
+# 4. Global Variables & Configuration
+# env:
+#   DRY_RUN: ${{ format('{0}', inputs.dry-run == 'true') }}
 
-permissions:
-  actions: write
-  contents: write
-  issues: write
-  pull-requests: write
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  meta:
-    name: Meta
+  info:
+    name: 🔎 Gather Info
     uses: stairwaytowonderland/.github/.github/workflows/ci-meta.yaml@v1
     permissions:
       contents: read
 
+  pre-commit:
+    name: 🎨 Pre-commit Check
+    needs: [info]
+    if: needs.info.outputs.is-release-workflow == 'true'
+    permissions:
+      contents: read
+      pull-requests: read
+    uses: stairwaytowonderland/.github/.github/workflows/pre-commit.yaml@v1
+
   release:
-    name: Release
-    needs: [meta]
-    if: needs.meta.outputs.is-release-workflow == 'true'
+    name: 🚀 Release
+    needs: [info]
+    if: needs.info.outputs.is-release-workflow == 'true'
+    permissions:
+      actions: write
+      contents: write
+      issues: write
+      pull-requests: write
     uses: ./.github/workflows/release.yaml
-    secrets: inherit
     # To use the dispatch-workflow for the first release, uncomment the following:
     # with:
-    #   dispatch-workflow: ${{ needs.meta.outputs.has-release-tags != 'true' && 'publish.yaml' || '' }}
+    #   dispatch-workflow: ${{ needs.info.outputs.has-release-tags != 'true' && 'publish.yaml' || '' }}
+    secrets: inherit
 
   publish:
-    name: Publish
-    needs: [meta]
-    if: needs.meta.outputs.is-publish-workflow == 'true'
-    uses: ./.github/workflows/publish.yaml
+    name: 📦 Publish
+    needs: [info]
+    if: needs.info.outputs.is-publish-workflow == 'true'
     permissions:
       contents: write
-    secrets: inherit
+    uses: ./.github/workflows/publish.yaml
     with:
       tag: ${{ github.ref_name }}
+    secrets: inherit
 
   normalize-majorver:
-    name: Normalize Major Version Tag
+    name: 🎉 Normalize Major Version Tag
     needs: [publish]
-    uses: stairwaytowonderland/.github/.github/workflows/normalize-majorver.yaml@v1
     permissions:
       contents: write
+    uses: stairwaytowonderland/.github/.github/workflows/normalize-majorver.yaml@v1
+
+  # * For a combined release and publish workflow, you can uncomment and configure the following job.
+  # * If used, disable the info, release, and publish jobs individually to avoid duplicate execution.
+  # release-and-publish:
+  #   name: 🚀 Release and Publish
+  #   permissions:
+  #     actions: write
+  #     contents: write
+  #     issues: write
+  #     pull-requests: write
+  #   uses: stairwaytowonderland/.github/.github/workflows/ci.yaml@v1
+  #   with:
+  #     normalize-majorver: true
+  #     # The following inputs are required in the workflow specified by first-release-dispatch-workflow (e.g. the ci.yaml in this case):
+  #     tag: ${{ inputs.tag }}
+  #     notes-b64: ${{ inputs.notes-b64 }}
+  #   secrets: inherit

@@ -2,8 +2,8 @@ name: 🎨 Pre-commit Check
 
 on:
   pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened]
+    branches:
+      - main
 
   workflow_call:
     inputs:
@@ -14,11 +14,13 @@ on:
 
 permissions:
   contents: read
-  pull-requests: read
 
 jobs:
   pre-commit:
-    name: Run pre-commit
+    name: Run Pre-commit Hooks
+    permissions:
+      contents: read
+      pull-requests: read
     uses: stairwaytowonderland/.github/.github/workflows/pre-commit.yaml@v1
     with:
       config: ${{ inputs.config }}

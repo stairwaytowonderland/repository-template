@@ -1,18 +1,28 @@
-name: 🚀 Repository Created
+name: 🌌 Repository Created
+
+on:
+  repository_dispatch:
+    types: [repository-created, create-labels]
 
 permissions:
   contents: read
 
-on:
-  repository_dispatch:
-    types: [repository-created]
-
 jobs:
   on-create:
     name: 🚀 On Create
+    if: github.event_name == 'repository_dispatch'
     uses: stairwaytowonderland/.github/.github/workflows/repository-created.yaml@v1
     with:
       repo: ${{ github.event.client_payload.repository.name }}
       url: ${{ github.event.client_payload.repository.url }}
       sender: ${{ github.event.client_payload.sender.login }}
       sender-id: ${{ github.event.client_payload.sender.id }}
+
+  create-labels:
+    name: 🏷️ Create Labels
+    if: github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
+    uses: stairwaytowonderland/label-management/.github/workflows/create-labels.yaml@v1
+    # with:
+    #   dry-run: ${{ inputs.dry-run == true }}
+    #   update-existing: ${{ inputs.update-existing == true }}
+    secrets: inherit
